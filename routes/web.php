@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('pagina_inicio');
 });
+
+Route::get('/Registro_socio', 'Registro_socio@mostrarformulario');
+
+Route::post('/Registro_socio', 'Registro_socio@devuelverespuesta')->name('Registro_socio.devuelverespuesta');
