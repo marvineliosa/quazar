@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('/prueba', function () {
     return view('prueba');
 });
+
+Route::get('/arbol', function () {
+    return view('arbol');
+});
