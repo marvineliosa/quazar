@@ -22,3 +22,7 @@ Route::get('/prueba', function () {
 Route::get('/arbol', function () {
     return view('arbol');
 });
+
+Route::get('/formulario', function () {
+    return view('formulario_registro');
+});
