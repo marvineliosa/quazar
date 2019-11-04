@@ -197,6 +197,8 @@
 
                           <div class="form-group"><label for="banco" class=" form-control-label">BENEFICIARIO</label><input  class="form-control"  id="beneficiario" type="text" placeholder="Beneficiario Directo" required="required" data-validation-required-message="Porfavor ingrese su beneficiario directo" ></div>
 
+
+                          <div class="form-group"><input class="btn btn-primary" type="submit" value="Submit"></div>
                   </div>
                 </div>
               </div>
