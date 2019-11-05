@@ -25,7 +25,11 @@ Route::get('/prueba', function () {
 });
 
 Route::get('/arbol', function () {
-    return view('arbol');
+    return view('arbol2');
+});
+
+Route::get('/arbol2', function () {
+    return view('arbol3');
 });
 
 Route::get('/formulario', function () {

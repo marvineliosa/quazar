@@ -247,6 +247,9 @@
     <script src="{{asset('arboles_1/raphael.js')}}"></script>
     <script src="{{asset('arboles_1/Treant.js')}}"></script>
     <script src="{{asset('arboles_1/jquery.easing.js')}}"></script>
+    <script src="{{asset('arboles_1/jquery.min.js')}}"></script>
+
+    <script src="{{asset('arboles_1/collapsable2.js')}}"></script>
 
     <!--Local Stuff-->
 

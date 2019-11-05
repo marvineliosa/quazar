@@ -7,12 +7,20 @@ h1,h2,h3,h4,h5,h6 { font-size:100%; font-weight:normal; }
 q:before,q:after { content:''; }
 abbr,acronym { border:0; }
 
-body { background: #fff; }
+body { background: rgb(51, 48, 48); }
 /* optional Container STYLES */
 .chart { height: 600px; margin: 5px; width: 900px; }
 .Treant > .node { padding: 3px; border: 1px solid #484848; border-radius: 3px; }
 .Treant > .node img { width: 100%; height: 100%; }
 
-.Treant .collapse-switch { width: 100%; height: 100%; border: none; }
-.Treant .node.collapsed { background-color: #DEF82D; }
-.Treant .node.collapsed .collapse-switch { background: none; }
+.Treant .collapse-switch { width: 100%; height: 100%; border: #484848; }
+.Treant .node.collapsed { background-color: rgb(61, 61, 61); }      /*cambia el color del nodo */
+.Treant .node.collapsed .collapse-switch { background: rgb(61, 61, 61); }
+
+.chart2 { height: 600px; margin: 5px; width: 900px; }
+.Treant > .node { padding: 3px; border: 1px solid #484848; border-radius: 3px; }
+.Treant > .node img { width: 100%; height: 100%; }
+
+.Treant .collapse-switch { width: 100%; height: 100%; border: #484848; }
+.Treant .node.collapsed { background-color: rgb(61, 61, 61); }      /*cambia el color del nodo */
+.Treant .node.collapsed .collapse-switch { background: rgb(61, 61, 61); }

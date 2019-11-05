@@ -1,5 +1,5 @@
 
-   var chart_config = {
+    var chart_config = {
         chart: {
             container: "#collapsable-example",
 
@@ -16,93 +16,60 @@
             }
         },
         nodeStructure: {
-            image: "/arboles_1/img/malory.png",
-            children: [
-                {
-                    image: "/arboles_1/img/lana.png",
-                    childrenDropLevel: 1,
-                    children: [
-								{
-									image: "/arboles_1/img/lana.png",
-									childrenDropLevel: 1,
-									children: [
-												{
-													image: "/arboles_1/img/lana.png",
-													childrenDropLevel: 1,
-													children: [
-														{
-															image: "/arboles_1/img/malory.png"
+          image: "/arboles_1/img/lana.png",
+          childrenDropLevel: 1,
+          children: [
+            {
+              image: "/arboles_1/img/malory.png"
 
-														}
-													]
-												},
-												{
-													image: "/arboles_1/img/sterling.png",
-													childrenDropLevel: 1,
-													children: [
-																{
-																	image: "/arboles_1/img/lana.png",
-																	childrenDropLevel: 1,
-																	children: [
-																		{
-																			image: "/arboles_1/img/malory.png"
+            },
+            {
+              image: "/arboles_1/img/malory.png"
 
-																		}
-																	]
-																},
-																{
-																	image: "/arboles_1/img/sterling.png",
-																	childrenDropLevel: 1,
-																	children: [
-																		{
-																			image: "/arboles_1/img/woodhouse.png"
-																		}
-																	]
-																}
-															]
-												}
-											]
-								},
-								{
-									image: "/arboles_1/img/sterling.png",
-									childrenDropLevel: 1,
-									children: [
-												{
-													image: "/arboles_1/img/lana.png",
-													childrenDropLevel: 1,
-													children: [
-														{
-															image: "/arboles_1/img/malory.png"
+            },
+            {
+              image: "/arboles_1/img/malory.png"
 
-														}
-													]
-												},
-												{
-													image: "/arboles_1/img/sterling.png",
-													childrenDropLevel: 1,
-													children: [
-														{
-															image: "/arboles_1/img/woodhouse.png"
-														}
-													]
-												}
-											]
-								}
-							]
-                },
-                {
-                    image: "/arboles_1/img/sterling.png",
-                    childrenDropLevel: 1,
-                    children: [
-                        {
-                            image: "/arboles_1/img/woodhouse.png"
-                        }
-                    ]
-                }
-            ]
+            },
+            {
+              image: "/arboles_1/img/malory.png"
+
+            },
+            {
+              image: "/arboles_1/img/malory.png"
+
+            },
+            {
+              image: "/arboles_1/img/malory.png"
+
+            },
+            {
+              image: "/arboles_1/img/malory.png"
+
+            },
+            {
+              image: "/arboles_1/img/malory.png"
+
+            },
+            {
+              image: "/arboles_1/img/malory.png"
+
+            },
+            {
+              image: "/arboles_1/img/malory.png"
+
+            },
+            {
+              image: "/arboles_1/img/malory.png"
+
+            },
+            {
+              image: "/arboles_1/img/malory.png"
+
+            }
+          ]
         }
     };
-
     var simple_chart_config = {
         chart: {
             container: "#OrganiseChart-simple",
@@ -125,11 +92,11 @@
                 connectorsSpeed: 700
             }
         },
-        
+
         nodeStructure: {
             text: { name: "Parent node" },
             children: [
-                {	
+                {
                     HTMLclass: "timeline main-date",
                     text: { desc: "", name: "Fecha.1" },
                     children: [
@@ -147,7 +114,7 @@
                         }
                     ]
                 },
-                {	
+                {
                     HTMLclass: "main-date",
                     text: { name: "Fecha.2" },
                     collapsed: true,
@@ -193,7 +160,7 @@
             ]
         }
     };
-    
+
 
 /* Array approach
     var config = {

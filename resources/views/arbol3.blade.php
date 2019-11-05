@@ -7,11 +7,7 @@
               <div class="chart" id="collapsable-example"></div>
 
 
-              </div>
-              <div 	class="chart" id="OrganiseChart-simple">
-
-
-              </div>
+            </div>
         </div>
     </div>
 
@@ -21,7 +17,6 @@
   <script type="text/javascript">
 
   tree = new Treant( chart_config );
-  line = new Treant( simple_chart_config );
 
   </script>
 
