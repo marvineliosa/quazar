@@ -53,7 +53,7 @@
   <!-- <img class="img-fluid rounded mb-5" src="{{asset('img/pagina_inicio/')}}" alt=""> -->
   <!-- <header class="masthead bg-primary text-white text-center" style="background-image: url(img/logo.jpg);"> -->
     <!-- <img class="" src="img/logo.jpg" alt="" > -->
-    <img src="img/logo_sin_fondo.png" class="img-fluid" alt="Responsive image">
+    <img src="{{asset('img/pagina_inicio/logo_sin_fondo.png')}}" class="img-fluid" alt="Responsive image">
 
   </header>
 
@@ -96,7 +96,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/3.jpg" alt="">
+            <img class="img-fluid" src="{{asset('img/pagina_inicio/3.jpg')}}" alt="">
           </div>
         </div>
 
@@ -108,7 +108,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/4.jpg" alt="">
+            <img class="img-fluid" src="{{asset('img/pagina_inicio/4.jpg')}}" alt="">
           </div>
         </div>
 
@@ -120,7 +120,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/5.jpg" alt="">
+            <img class="img-fluid" src="{{asset('img/pagina_inicio/5.jpg')}}" alt="">
           </div>
         </div>
 
@@ -132,7 +132,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/5.jpg" alt="">
+            <img class="img-fluid" src="{{asset('img/pagina_inicio/5.jpg')}}" alt="">
           </div>
         </div>
 
@@ -144,7 +144,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/7.jpg" alt="">
+            <img class="img-fluid" src="{{asset('img/pagina_inicio/7.jpg')}}" alt="">
           </div>
         </div>
 
@@ -156,7 +156,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/8.jpg" alt="">
+            <img class="img-fluid" src="{{asset('img/pagina_inicio/8.jpg')}}" alt="">
           </div>
         </div>
 
@@ -168,7 +168,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/9.jpg" alt="">
+            <img class="img-fluid" src="{{asset('img/pagina_inicio/9.jpg')}}" alt="">
           </div>
         </div>
 
@@ -363,7 +363,7 @@ BIENESTAR.</h2>
                   <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Modal - Image -->
-                <img class="img-fluid rounded mb-5" src="img/2.jpg" alt="">
+                <img class="img-fluid rounded mb-5" src="{{asset('img/pagina_inicio/2.jpg')}}" alt="">
                 <!-- Portfolio Modal - Text -->
                 <p class="mb-5">Una de las mayores proezas de un hombre en la vida, es tener un negocio que le produzca dinero.</p>
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
@@ -402,7 +402,7 @@ BIENESTAR.</h2>
                   <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Modal - Image -->
-                <img class="img-fluid rounded mb-5" src="img/3.jpg" alt="">
+                <img class="img-fluid rounded mb-5" src="{{asset('img/pagina_inicio/3.jpg')}}" alt="">
                 <!-- Portfolio Modal - Text -->
                 <p class="mb-5">Hoy en día los negocios millonarios son a través del network marketing denominándose por su gran crecimiento espectacular…</p>
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
@@ -482,7 +482,7 @@ SUS COMPAÑÍAS (SIN SABER LO QUE HOY SON)</h2>
                   <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Modal - Image -->
-                <img class="img-fluid rounded mb-5" src="img/5.jpg" alt="">
+                <img class="img-fluid rounded mb-5" src="{{asset('img/pagina_inicio/5.jpg')}}" alt="">
                 <!-- Portfolio Modal - Text -->
                 <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
@@ -521,7 +521,7 @@ SUS COMPAÑÍAS (SIN SABER LO QUE HOY SON)</h2>
                   <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Modal - Image -->
-                <img class="img-fluid rounded mb-5" src="img/5.jpg" alt="">
+                <img class="img-fluid rounded mb-5" src="{{asset('img/pagina_inicio/5.jpg')}}" alt="">
                 <!-- Portfolio Modal - Text -->
                 <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
@@ -560,7 +560,7 @@ SUS COMPAÑÍAS (SIN SABER LO QUE HOY SON)</h2>
                   <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Modal - Image -->
-                <img class="img-fluid rounded mb-5" src="img/7.jpg" alt="">
+                <img class="img-fluid rounded mb-5" src="{{asset('img/pagina_inicio/7.jpg')}}" alt="">
                 <!-- Portfolio Modal - Text -->
                 <p class="mb-5">Gana $1,100 pesos por cada persona que ingreses y califique.
                   ¡Imagínate! En tu primera semana podrías ganar más de lo que ganas actualmente.
@@ -602,7 +602,7 @@ SUS COMPAÑÍAS (SIN SABER LO QUE HOY SON)</h2>
                   <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Modal - Image -->
-                <img class="img-fluid rounded mb-5" src="img/8.jpg" alt="">
+                <img class="img-fluid rounded mb-5" src="{{asset('img/pagina_inicio/8.jpg')}}" alt="">
                 <!-- Portfolio Modal - Text -->
                 <p class="mb-5">De la segunda compra de tu gente en adelante también cobrarás por c/u de las personas activas en 3 generaciones: $50 primer generación $150 segunda generación $500 tercera generación</p>
                 <p class="mb-5">Tus ganancias se potencializarán y ¡mientras más gente invites, más ayudas a tu equipo y lo mejor de todo es que ganarás más!</p>
@@ -642,7 +642,7 @@ SUS COMPAÑÍAS (SIN SABER LO QUE HOY SON)</h2>
                   <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Modal - Image -->
-                <img class="img-fluid rounded mb-5" src="img/9.jpg" alt="">
+                <img class="img-fluid rounded mb-5" src="{{asset('img/pagina_inicio/9.jpg')}}" alt="">
                 <!-- Portfolio Modal - Text -->
                 <p class="mb-5">Con Quasar tienes un negocio llave en mano, además de que una vez siendo socio Quasar te daremos todo el know how para que puedas obtener ganancias inmediatas y residuales duraderos.</p>
                 <p class="mb-5">Esto es posible gracias a nuestro poderoso plan de pagos el cual, genera explosividad, retención, volumen a profundidad infinita, apalancamiento, derrama y la oportunidad de generar altos cheques en corto tiempo gracias a nuestro bono generacional.</p>
