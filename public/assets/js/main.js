@@ -1,4 +1,4 @@
-$.noConflict();
+//$.noConflict();
 
 jQuery(document).ready(function($) {
 
@@ -10,7 +10,7 @@ jQuery(document).ready(function($) {
 
 	jQuery('.selectpicker').selectpicker;
 
-
+	$("#cc-payment").val(123456);
 	
 
 	$('.search-trigger').on('click', function(event) {

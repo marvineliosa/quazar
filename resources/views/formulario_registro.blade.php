@@ -219,7 +219,7 @@
                             </div>
                           <div>
                               <button id="payment-button" type="submit" class="btn btn-lg btn-info btn-block">
-                                   <i class="fa fa-lock fa-lg"></i>&nbsp; 
+                                   <i class="fa fa-lock fa-lg"></i>&nbsp;
                                   <span id="payment-button-amount">Enviar</span>
                                   <span id="payment-button-sending" style="display:none;">Sending…</span>
                               </button>
@@ -233,12 +233,62 @@
 
 
 @endsection
-@section('script')
 
   <script>
+     // $("#cc-payment").val(123456);
 
+
+    function RegistrarSocio2(){
+      var success;
+      var url = "/socios/registrar_socio";
+      var dataForm = new FormData();
+      dataForm.append('p1',"p1");
+      dataForm.append('p2','p2');
+      //lamando al metodo ajax
+      metodoAjax(url,dataForm,function(success){
+        //aquí se escribe todas las operaciones que se harían en el succes
+        //la variable success es el json que recibe del servidor el método AJAX
+        MensajeModal("TITULO DEL MODAL","MENSAJE DEL MODAL");
+      });
+    }
+
+
+        function RegistrarSocio(){
+          // alert('entra');
+          var url = "/socios/registrar_socio";
+          var dataForm = new FormData();
+          var resultado = null;
+
+          $.ajax({
+          // jQuery.ajax({
+          url :url,
+          data : dataForm,
+          contentType:false,
+          processData:false,
+          headers:{
+              'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+          type: 'POST',
+          dataType : 'json',
+          beforeSend: function (){
+            $("#modalCarga").modal();
+          },
+          success : function(json){
+            //resultado = json;
+            //callback(json);
+            //$("#nombre_producto").focus();
+          },
+          error : function(xhr, status) {
+            $("#textoModalMensaje").text('Existió un problema con la operación');
+            $("#modalMensaje").modal();
+            MensajeModal('¡ERROR!','Existió un problema, intentelo de nuevo, si el problema persiste favor de reportarlo a la extensión --.')
+          },
+          complete : function(xhr, status){
+             $("#modalCarga").modal('hide');
+             $("#nombre_producto").focus();
+          }
+          });//*/
+        }
 
 
   </script>
-
-@endsection
