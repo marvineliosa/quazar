@@ -19,6 +19,7 @@ Route::get('/', function () {
 Route::get('/Registro_socio', 'Registro_socio@mostrarformulario');
 
 Route::post('/Registro_socio', 'Registro_socio@devuelverespuesta')->name('Registro_socio.devuelverespuesta');
+Route::post('/socios/registrar_socio', 'UsuariosController@RegistrarSocio');
 
 Route::get('/prueba', function () {
     return view('prueba');

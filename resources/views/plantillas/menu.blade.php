@@ -10,6 +10,7 @@
     <meta name="description" content="Ela Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- <script src="{{asset('jquery-3.4.1.js')}}"></script> -->
     <link rel="apple-touch-icon" href="https://i.imgur.com/QRAUqs9.png">
     <link rel="shortcut icon" href="https://i.imgur.com/QRAUqs9.png">
 
@@ -28,7 +29,7 @@
     <link href="https://cdn.jsdelivr.net/npm/weathericons@2.1.0/css/weather-icons.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.css" rel="stylesheet" />
 
-    <!-- <script src="{{asset('jquery-3.4.1.js')}}"></script> -->
+
    <style>
     #weatherWidget .currentDesc {
         color: #ffffff!important;
@@ -68,6 +69,7 @@
 </head>
 
 <body>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     @include('plantillas.navbar')
     <!-- Right Panel -->
     <div id="right-panel" class="right-panel">
@@ -210,11 +212,9 @@
 
     <!-- Scripts -->
     <script src="{{asset('jquery-3.4.1.js')}}"></script>
+    <!-- <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> -->
     <!-- <script src="{{asset('arboles_1/jquery.min.js')}}"></script> -->
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script> -->
-
-    <!-- <script src="{{asset('jquery-3.4.1.js')}}"></script> -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
@@ -233,24 +233,66 @@
     <script src="https://cdn.jsdelivr.net/npm/flot-spline@0.0.1/js/jquery.flot.spline.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/simpleweather@3.1.0/jquery.simpleWeather.min.js"></script>
-    <script src="assets/js/init/weather-init.js"></script>
+    <!-- Esta api del clima causa errores en el dashboard -->
+    <!-- <script src="assets/js/init/weather-init.js"></script> -->
 
     <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.js"></script>
     <script src="assets/js/init/fullcalendar-init.js"></script>
 
-    <link href="{{asset('arboles_1/Treant.css')}}" rel="stylesheet">
+    <!-- <link href="{{asset('arboles_1/Treant.css')}}" rel="stylesheet">
     <link href="{{asset('arboles_1/collapsable.css')}}" rel="stylesheet">
-    <link href="{{asset('arboles_1/perfect-scrollbar.css')}}" rel="stylesheet">
+    <link href="{{asset('arboles_1/perfect-scrollbar.css')}}" rel="stylesheet"> -->
 
-    <script src="{{asset('arboles_1/collapsable.js')}}"></script>
-    <script src="{{asset('arboles_1/raphael.js')}}"></script>
+    <!-- <script src="{{asset('arboles_1/collapsable.js')}}"></script> -->
+    <!-- <script src="{{asset('arboles_1/raphael.js')}}"></script>
     <script src="{{asset('arboles_1/Treant.js')}}"></script>
-    <script src="{{asset('arboles_1/jquery.easing.js')}}"></script>
+    <script src="{{asset('arboles_1/jquery.easing.js')}}"></script> -->
 
     <!--Local Stuff-->
 
 </body>
 </html>
+
+<script type="text/javascript">
+
+//señor metodo maestro ajax
+function metodoAjax(url,dataForm,callback){
+  var resultado = null;
+
+  $.ajax({
+  // jQuery.ajax({
+  url :url,
+  data : dataForm,
+  contentType:false,
+  processData:false,
+  headers:{
+      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    },
+  type: 'POST',
+  dataType : 'json',
+  beforeSend: function (){
+    $("#modalCarga").modal();
+  },
+  success : function(json){
+    //resultado = json;
+    callback(json);
+    //$("#nombre_producto").focus();
+  },
+  error : function(xhr, status) {
+    $("#textoModalMensaje").text('Existió un problema con la operación');
+    $("#modalMensaje").modal();
+    MensajeModal('¡ERROR!','Existió un problema, intentelo de nuevo, si el problema persiste favor de reportarlo a la extensión --.')
+  },
+  complete : function(xhr, status){
+     $("#modalCarga").modal('hide');
+     $("#nombre_producto").focus();
+  }
+  });//*/
+  //$("#nombre_producto").focus();
+  }
+
+
+</script>
 
 @yield('script')

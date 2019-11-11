@@ -11,7 +11,7 @@
                             <h3 class="text-center">Pay Invoice</h3>
                         </div>
                         <hr>
-                        <form action="#" method="post" novalidate="novalidate">
+                        <div action="#" method="post" novalidate="novalidate">
                             <div class="form-group text-center">
                                 <ul class="list-inline">
                                     <li class="list-inline-item"><i class="text-muted fa fa-cc-visa fa-2x"></i></li>
@@ -55,13 +55,13 @@
                                 </div>
                             </div>
                             <div>
-                                <button id="payment-button" type="submit" class="btn btn-lg btn-info btn-block">
+                                <button id="payment-button" class="btn btn-lg btn-info btn-block" onclick="RegistrarSocio()">
                                     <i class="fa fa-lock fa-lg"></i>&nbsp;
                                     <span id="payment-button-amount">Pay $100.00</span>
                                     <span id="payment-button-sending" style="display:none;">Sending…</span>
                                 </button>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
 
@@ -70,12 +70,59 @@
     </div>
 
 @endsection
-@section('script')
 
   <script>
+    function RegistrarSocio2(){
+      var success;
+      var url = "/socios/registrar_socio";
+      var dataForm = new FormData();
+      dataForm.append('p1',"p1");
+      dataForm.append('p2','p2');
+      //lamando al metodo ajax
+      metodoAjax(url,dataForm,function(success){
+        //aquí se escribe todas las operaciones que se harían en el succes
+        //la variable success es el json que recibe del servidor el método AJAX
+        MensajeModal("TITULO DEL MODAL","MENSAJE DEL MODAL");
+      });
+    }
 
-    
+
+        function RegistrarSocio(){
+          // alert('entra');
+          var url = "/socios/registrar_socio";
+          var dataForm = new FormData();
+          var resultado = null;
+
+          $.ajax({
+          // jQuery.ajax({
+          url :url,
+          data : dataForm,
+          contentType:false,
+          processData:false,
+          headers:{
+              'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+          type: 'POST',
+          dataType : 'json',
+          beforeSend: function (){
+            $("#modalCarga").modal();
+          },
+          success : function(json){
+            //resultado = json;
+            //callback(json);
+            //$("#nombre_producto").focus();
+          },
+          error : function(xhr, status) {
+            $("#textoModalMensaje").text('Existió un problema con la operación');
+            $("#modalMensaje").modal();
+            MensajeModal('¡ERROR!','Existió un problema, intentelo de nuevo, si el problema persiste favor de reportarlo a la extensión --.')
+          },
+          complete : function(xhr, status){
+             $("#modalCarga").modal('hide');
+             $("#nombre_producto").focus();
+          }
+          });//*/
+        }
+
 
   </script>
-
-@endsection
