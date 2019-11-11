@@ -72,6 +72,8 @@
 @endsection
 
   <script>
+     // $("#cc-payment").val(123456);
+
     function RegistrarSocio2(){
       var success;
       var url = "/socios/registrar_socio";

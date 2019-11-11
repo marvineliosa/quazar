@@ -242,7 +242,7 @@
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
                 <label>Nombre</label>
-                <input class="form-control" id="name" type="text" placeholder="Nombre" required="required" data-validation-required-message="Please enter your name.">
+                <input class="form-control" id="contacto_nombre" type="text" placeholder="Nombre" required="required" data-validation-required-message="Please enter your name.">
                 <p class="help-block text-danger"></p>
               </div>
             </div>
@@ -682,3 +682,9 @@ SUS COMPAÑÍAS (SIN SABER LO QUE HOY SON)</h2>
 </body>
 
 </html>
+
+<script type="text/javascript">
+  
+  $("#contacto_nombre").val('algo');
+
+</script>
