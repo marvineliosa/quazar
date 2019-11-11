@@ -27,6 +27,10 @@
         <link href="https://cdn.jsdelivr.net/npm/weathericons@2.1.0/css/weather-icons.css" rel="stylesheet" />
         <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.css" rel="stylesheet" />
 
+        <!-- DATA TABLES -->
+        <link rel="stylesheet" href="{{asset('assets/css/lib/datatable/dataTables.bootstrap.min.css')}}">
+
+        <!-- <link href="{{asset('vendors/iCheck/skins/flat/green.css')}}" rel="stylesheet"> -->
 
        <style>
         #weatherWidget .currentDesc {
@@ -75,7 +79,8 @@
             <header id="header" class="header">
                 <div class="top-left">
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="./"><img src="images/logo.png" alt="Logo"></a>
+                        <!-- <a class="navbar-brand" href="./"><img src="images/logo3.png" alt="Logo"></a> -->
+                        <a class="navbar-brand" href="./"><img src="images/logo.png" alt="Logo" style="width: 40%; height: auto;"></a>
                         <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a>
                         <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
                     </div>

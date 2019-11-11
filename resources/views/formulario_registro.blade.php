@@ -8,8 +8,9 @@
     	<!-- Credit Card -->
         <div id="registro_socio">
             <div class="card-body">
-                <form action="/Registro_socio.devuelverespuesta" method="POST" name="sentMessage" id="registro_socio">
-                    <div class="form-group text-center" "font-weight-bold">
+                <div id="registro_socio" onclick="RegistrarSocio()">
+                <!-- <div action="/Registro_socio.devuelverespuesta" method="POST" name="sentMessage" id="registro_socio"> -->
+                    <div class="form-group text-center font-weight-bold">
                       <div class="card-header">
                         <strong>Registro de un nuevo socio</strong> <small> QUASAR</small>
                       </div>
@@ -224,7 +225,7 @@
                                   <span id="payment-button-sending" style="display:none;">Sending…</span>
                               </button>
                           </div>
-                        </form>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -238,7 +239,7 @@
      // $("#cc-payment").val(123456);
 
 
-    function RegistrarSocio2(){
+    function RegistrarSocio(){
       var success;
       var url = "/socios/registrar_socio";
       var dataForm = new FormData();
@@ -253,7 +254,7 @@
     }
 
 
-        function RegistrarSocio(){
+        function RegistrarSocio2(){
           // alert('entra');
           var url = "/socios/registrar_socio";
           var dataForm = new FormData();
