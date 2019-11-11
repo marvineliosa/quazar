@@ -25,6 +25,9 @@ Route::post('/socios/registrar_socio', 'UsuariosController@RegistrarSocio');
 Route::get('/prueba', function () {
     return view('prueba');
 });
+Route::get('/socios', function () {
+    return view('listado_socios');
+});
 
 Route::get('/arbol', function () {
     return view('arbol');

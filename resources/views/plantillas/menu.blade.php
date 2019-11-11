@@ -243,6 +243,19 @@
         <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.js"></script>
         <script src="assets/js/init/fullcalendar-init.js"></script>
 
+        <!-- DATA TABLES -->
+        <script src="{{asset('jquery-3.4.1.js')}}"></script>
+        <script src="{{asset('assets/js/lib/data-table/datatables.min.js')}}"></script>
+        <script src="{{asset('assets/js/lib/data-table/dataTables.bootstrap.min.js')}}"></script>
+        <script src="{{asset('assets/js/lib/data-table/dataTables.buttons.min.js')}}"></script>
+        <script src="{{asset('assets/js/lib/data-table/buttons.bootstrap.min.js')}}"></script>
+        <script src="{{asset('assets/js/lib/data-table/jszip.min.js')}}"></script>
+        <script src="{{asset('assets/js/lib/data-table/vfs_fonts.js')}}"></script>
+        <script src="{{asset('assets/js/lib/data-table/buttons.html5.min.js')}}"></script>
+        <script src="{{asset('assets/js/lib/data-table/buttons.print.min.js')}}"></script>
+        <script src="{{asset('assets/js/lib/data-table/buttons.colVis.min.js')}}"></script>
+        <script src="{{asset('assets/js/init/datatables-init.js')}}"></script>
+
         <!-- <link href="{{asset('arboles_1/Treant.css')}}" rel="stylesheet">
         <link href="{{asset('arboles_1/collapsable.css')}}" rel="stylesheet">
         <link href="{{asset('arboles_1/perfect-scrollbar.css')}}" rel="stylesheet"> -->
@@ -297,10 +310,45 @@ function metodoAjax(url,dataForm,callback){
 
 $("#cc-payment").val(123456);
 
+    crearDatatable();
+  function crearDatatable(dato_busqueda,numero_pagina){
+    //$("#tabla_datos").dataTable().fnDestroy();
+    var tabla = $('#tabla_datos').DataTable({
+        //responsive: true,
+        "searching": true,
+        "paging":   true,
+        "info":     true,
+        "ordering": false,
+        "pageLength": 10,
+        //'displayStart': numero_pagina,
+        language: {
+          emptyTable: "No hay datos para mostrar en la tabla",
+          zeroRecords: "No hay datos para mostrar en la tabla",
+          "search": "Buscar:",
+          "info":"Se muestra los registros _START_ a _END_ de _TOTAL_ totales.",
+          "infoEmpty":"No se ha encontrado registros.",
+          "lengthMenu":"Mostrando _MENU_ registros",
+          "infoFiltered":"(Filtrado de un total de _MAX_ registros)",
+          "search": "Buscar: ",
+          paginate: {
+            "first":      "Primero",
+            "last":       "Ultimo",
+            "next":       "Siguiente",
+            "previous":   "Anterior"
+          },
+        }
+      });//*/
+      if(dato_busqueda){
+        tabla.search( dato_busqueda ).draw();
+        $( ".paginate_button  [data-dt-idx='"+numero_pagina+"']" ).trigger("click");
+      }
+  }
 
 function MensajeModal(){
     console.log('algo');
 }
+
+
 
 
 //---------------------------- MENU --------------------------------
