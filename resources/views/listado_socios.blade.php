@@ -25,7 +25,6 @@
                           <td>2221924430</td>
                           <td>Q2</td>
                           <td>Q16</td>
-                          <td></td>
                       </tr>
                   </tbody>
               </table>

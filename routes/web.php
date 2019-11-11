@@ -32,6 +32,9 @@ Route::get('/socios', function () {
 Route::get('/arbol', function () {
     return view('arbol');
 });
+Route::get('/pedidos', function () {
+    return view('listado_pedidos');
+});
 
 Route::get('/formulario', function () {
     return view('formulario_registro');
