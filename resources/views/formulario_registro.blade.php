@@ -1,80 +1,243 @@
 @extends('plantillas.menu')
 @section('content')
 
+
+  <div class="Content justify-content-center">
     <div class="col-lg-12 col-md-12">
-        <div class="card">
+      <div class="card">
+    	<!-- Credit Card -->
+        <div id="registro_socio">
             <div class="card-body">
-            	<!-- Credit Card -->
-                <div id="pay-invoice">
-                    <div class="card-body">
-                        <div class="card-title">
-                            <h3 class="text-center">Pay Invoice</h3>
+                <form action="/Registro_socio.devuelverespuesta" method="POST" name="sentMessage" id="registro_socio">
+                    <div class="form-group text-center" "font-weight-bold">
+                      <div class="card-header">
+                        <strong>Registro de un nuevo socio</strong> <small> QUASAR</small>
+                      </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="cc-exp" class="control-label mb-1">Nombre</label>
+                                <input  class="form-control"  id="nombre" type="text" placeholder="Ingrese su nombre completo" required="required" data-validation-required-message="Porfavor ingrese un nombre valido">
+                            </div>
                         </div>
-                        <hr>
-                        <form action="#" method="post" novalidate="novalidate">
-                            <div class="form-group text-center">
-                                <ul class="list-inline">
-                                    <li class="list-inline-item"><i class="text-muted fa fa-cc-visa fa-2x"></i></li>
-                                    <li class="list-inline-item"><i class="fa fa-cc-mastercard fa-2x"></i></li>
-                                    <li class="list-inline-item"><i class="fa fa-cc-amex fa-2x"></i></li>
-                                    <li class="list-inline-item"><i class="fa fa-cc-discover fa-2x"></i></li>
-                                </ul>
-                            </div>
+                        <div class="col-6">
+                            <label for="x_card_code" class="control-label mb-1">Sexo</label>
+                              <div class="form-check">
+                                  <div class="radio">
+                                      <label for="radio1" class="form-check-label ">
+                                          <input type="radio" id="masc" name="masculino" value="option1" class="form-check-input">Masculino
+                                      </label>
+                                  </div>
+                                  <div class="radio">
+                                      <label for="radio2" class="form-check-label ">
+                                          <input type="radio" id="fem" name="femenino" value="option2" class="form-check-input">Femenino
+                                      </label>
+                                  </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
                             <div class="form-group">
-                                <label for="cc-payment" class="control-label mb-1">Payment amount</label>
-                                <input id="cc-payment" name="cc-payment" type="text" class="form-control" aria-required="true" aria-invalid="false" value="100.00">
+                                <label for="cc-exp" class="control-label mb-1">Correo electrónico</label>
+                                <input  class="form-control"  id="correo" type="text" placeholder="Ingrese su correo electronico" required="required" data-validation-required-message="Porfavor ingrese un correo valido">
                             </div>
-                            <div class="form-group has-success">
-                                <label for="cc-name" class="control-label mb-1">Name on card</label>
-                                <input id="cc-name" name="cc-name" type="text" class="form-control cc-name valid" data-val="true" data-val-required="Please enter the name on card" autocomplete="cc-name" aria-required="true" aria-invalid="false" aria-describedby="cc-name">
-                                <span class="help-block field-validation-valid" data-valmsg-for="cc-name" data-valmsg-replace="true"></span>
-                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="calle" class=" form-control-label">Calle</label>
+                                <input  class="form-control"  id="calle" type="text" placeholder="Calle" required="required" data-validation-required-message="Porfavor ingrese un domicilio valido" >
+                              </div>
+                          </div>
+
+                          <div class="col-md-2">
+                              <div class="form-group">
+                                <label for="calle" class="control-label mb-1">N° ext.</label>
+                                <input  class="form-control"  id="num.ext" type="text" placeholder="Num exterior" required="required" data-validation-required-message="Porfavor ingrese un numero exterior valido" >
+                              </div>
+                          </div>
+
+                          <div class="col-md-2">
                             <div class="form-group">
-                                <label for="cc-number" class="control-label mb-1">Card number</label>
-                                <input id="cc-number" name="cc-number" type="tel" class="form-control cc-number identified visa" value="" data-val="true" data-val-required="Please enter the card number" data-val-cc-number="Please enter a valid card number">
-                                <span class="help-block" data-valmsg-for="cc-number" data-valmsg-replace="true"></span>
+                              <label for="cc-exp" class="control-label mb-1">N° int.</label>
+                              <input  class="form-control"  id="num.int" type="text" placeholder="Num interior" required="required" data-validation-required-message="Porfavor ingrese un numero interior valido" >
                             </div>
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <label for="cc-exp" class="control-label mb-1">Expiration</label>
-                                        <input id="cc-exp" name="cc-exp" type="tel" class="form-control cc-exp" value="" data-val="true" data-val-required="Please enter the card expiration" data-val-cc-exp="Please enter a valid month and year" placeholder="MM / YY">
-                                        <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
-                                    </div>
+                          </div>
+
+                          <div class="col-md-2">
+                            <div class="form-group">
+                              <label for="cc-exp" class="control-label mb-1">CP</label>
+                              <input  class="form-control"  id="cp" type="text" placeholder="Codigo Postal" required="required" data-validation-required-message="El codigo postal debe tener 4 digitos" >
+                            </div>
+                          </div>
+                        </div>
+
+
+                        <div class="row">
+                              <div class="col-md-6">
+                                  <div class="form-group">
+                                    <label for="calle" class=" form-control-label">Colonia</label>
+                                    <input  class="form-control"  id="colonia" type="text" placeholder="Colonia" required="required" data-validation-required-message="Porfavor ingrese una colonia valida" >
+                                  </div>
+                              </div>
+
+                              <div class="col-md-3">
+                                  <div class="form-group">
+                                    <label for="calle" class="control-label mb-1">Localidad</label>
+                                    <input  class="form-control"  id="localidad" type="text" placeholder="localidad" required="required" data-validation-required-message="Porfavor ingrese una localidad valida" >
+                                  </div>
+                              </div>
+
+                              <div class="col-md-3">
+                                <div class="form-group">
+                                  <label for="cc-exp" class="control-label mb-1">Entidad</label>
+                                  <input  class="form-control"  id=entidad type="text" placeholder="entidad" required="required" data-validation-required-message="Porfavor ingrese un estado valido" >
                                 </div>
-                                <div class="col-6">
-                                    <label for="x_card_code" class="control-label mb-1">Security code</label>
+                              </div>
+                            </div>
+
+
+
+                        <div class="row">
+                          <div class="col-md-6">
+                                <label class=" form-control-label">Telefono de casa (con LADA)</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="fa fa-phone"></i></div>
+                                      <input class="form-control" id="tel.casa" type="number" placeholder="Telefono de casa" required="required" data-validation-required-message="Porfavor ingrese el numero de telefono  a 10 digitos, empezando con la lada">
+                                      <p class="help-block text-danger"></p>
+                                </div>
+                                <small class="form-text text-muted">(ext.) 999-9999</small>
+                          </div>
+
+                          <div class="col-md-6">
+                                <label class=" form-control-label">Telefono celular</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="fa fa-phone"></i></div>
+                                      <input class="form-control" id="tel.cel" type="number" placeholder="Celular" required="required" data-validation-required-message="Porfavor ingrese el numero celular  a 10 digitos">
+                                      <p class="help-block text-danger"></p>
+                                </div>
+                                <small class="form-text text-muted">999-999-99-99</small>
+                          </div>
+                          </div>
+
+
+                      <div class="row"><div class="col-md-12"><div class="form-group"><label for="curp" class=" form-control-label">CURP</label><input  class="form-control"  id="curp" type="text" placeholder="CURP a 18 caracteres" required="required" data-validation-required-message="Porfavor ingrese un curp valido a 18 caracteres" ></div></div></div>
+
+
+
+                        <div class="row">
+                              <div class="col-md-4">
+                                  <div class="form-group">
+                                    <label for="calle" class=" form-control-label">Fecha de Nacimiento</label>
                                     <div class="input-group">
-                                        <input id="x_card_code" name="x_card_code" type="tel" class="form-control cc-cvc" value="" data-val="true" data-val-required="Please enter the security code" data-val-cc-cvc="Please enter a valid security code" autocomplete="off">
-                                        <div class="input-group-addon">
-                                            <span class="fa fa-question-circle fa-lg" data-toggle="popover" data-container="body" data-html="true" data-title="Security Code"
-                                            data-content="<div class='text-center one-card'>The 3 digit code on back of the card..<div class='visa-mc-cvc-preview'></div></div>"
-                                            data-trigger="hover"></span>
+                                        <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+                                        <input class="form-control" id="fecha.nac" type="date" placeholder="Fecha de Nacimiento" required="required" data-validation-required-message="Porfavor ingrese una fecha de nacimiento valida">
+                                    </div>
+                                    <small class="form-text text-muted">dia/mes/año</small>
+                                  </div>
+                              </div>
+
+                              <div class="col-md-4">
+                                  <div class="form-group">
+                                    <label for="calle" class=" form-control-label">Entidad de nacimiento</label>
+                                    <input  class="form-control"  id="entidad.nac" type="text" placeholder="Estado" required="required" data-validation-required-message="Porfavor ingrese un estado valido" >
+                                  </div>
+                              </div>
+
+                              <div class="col-md-4">
+                                <div class="row form-group">
+                                    <div class="col col-md-12"><label class=" form-control-label">Estado Civil:</label></div>
+                                    <div class="col col-md-5">
+                                        <div class="form-check">
+                                            <div class="radio">
+                                                <label for="radio3" class="form-check-label ">
+                                                    <input type="radio" id="solter@" name="solter@" value="option3" class="form-check-input">Solter@
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label for="radio4" class="form-check-label ">
+                                                    <input type="radio" id="casad@" name="casad@" value="option4" class="form-check-input">Casad@
+                                                </label>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div>
-                                <button id="payment-button" type="submit" class="btn btn-lg btn-info btn-block">
-                                    <i class="fa fa-lock fa-lg"></i>&nbsp;
-                                    <span id="payment-button-amount">Pay $100.00</span>
-                                    <span id="payment-button-sending" style="display:none;">Sending…</span>
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                              </div>
+                          </div>
 
-            </div>
-        </div>
-    </div>
+
+
+                          <div class="row">
+                                <div class="col-md-4">
+                                  <div class="form-group">
+                                    <label for="calle" class=" form-control-label">Banco</label>
+                                    <br>
+                                    <select data-placeholder="Seleccione su banco preferencial " class="standardSelect" tabindex="1">
+                                      <option value="Bancomer">Bancomer</option>
+                                      <option value="Banco Azteca">Banco Azteza</option>
+                                      <option value="Banamex">Banamex</option>
+                                      <option value="Sntander">Santander</option>
+                                      <option value="Otro...">Otro...</option>
+                                      <!-- <div class="form-group"><label for="otro" class=" form-control-label">Ingrese su banco preferencial</label><input  class="form-control"  id="banco2" type="text" placeholder="Ingrese su Banco preferencial" required="required" data-validation-required-message="Porfavor ingrese un banco valido" ></div> -->
+                                    </select>
+                                  </div>
+                                </div>
+
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                      <label for="calle" class=" form-control-label">Clave Interbancaria</label>
+                                      <input  class="form-control"  id="clave.interbancaria" type="text" placeholder="Clave Interbancaria" required="required" data-validation-required-message="Porfavor ingrese su clave interbancaria a 16 digitos">
+                                    </div>
+                                </div>
+                            </div>
+
+                          <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label for="calle" class=" form-control-label">ID de patrocinador</label>
+                                      <input  class="form-control"  id="id.patrocinador" type="number" placeholder="ID de patrocinador" required="required" data-validation-required-message="Porfavor ingrese un ID valido" >
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label for="calle" class=" form-control-label">ID de up line directo</label>
+                                      <input  class="form-control"  id="id.up.line.directo" type="number" placeholder="ID de up line directo" required="required" data-validation-required-message="Porfavor ingrese un ID valido" >
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                  <div class="form-group">
+                                    <label for="cc-exp" class="control-label mb-1">Beneficiario</label>
+                                    <input  class="form-control"  id="beneficiario" type="text" placeholder="Beneficiario" required="required" data-validation-required-message="Porfavor ingrese un nombre valido" >
+                                  </div>
+                                </div>
+                            </div>
+                          <div>
+                              <button id="payment-button" type="submit" class="btn btn-lg btn-info btn-block">
+                                   <i class="fa fa-lock fa-lg"></i>&nbsp; 
+                                  <span id="payment-button-amount">Enviar</span>
+                                  <span id="payment-button-sending" style="display:none;">Sending…</span>
+                              </button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
 
 @endsection
 @section('script')
 
   <script>
 
-    
+
 
   </script>
 
