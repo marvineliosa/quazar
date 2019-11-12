@@ -1,7 +1,7 @@
 
-var simple_chart_config = {
+var simple_chart_configlinea = {
 	chart: {
-		container: "#OrganiseChart-simple",
+		container: "#OrganiseChart-simpleLinea",
 		hideRootNode: true,
 		connectors: {
 			type: 'step',

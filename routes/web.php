@@ -32,6 +32,18 @@ Route::get('/arbol2', function () {
     return view('arbol3');
 });
 
+Route::get('/arbol3', function () {
+    return view('arbol4');
+});
+
 Route::get('/formulario', function () {
     return view('formulario_registro');
+});
+
+Route::get('/linea', function () {
+    return view('linea');
+});
+
+Route::get('/arboles1', function () {
+    return view('arboles1');
 });

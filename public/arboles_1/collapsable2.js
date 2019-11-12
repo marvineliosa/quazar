@@ -1,7 +1,7 @@
 
-    var chart_config = {
+    var chart_config2 = {
         chart: {
-            container: "#collapsable-example",
+            container: "#collapsable-example2",
 
             animateOnInit: true,
 
@@ -70,9 +70,9 @@
           ]
         }
     };
-    var simple_chart_config = {
+    var simple_chart_config2 = {
         chart: {
-            container: "#OrganiseChart-simple",
+            container: "#OrganiseChart-simple2",
             hideRootNode: true,
             connectors: {
                 type: 'step',
@@ -101,23 +101,23 @@
                     text: { desc: "", name: "Fecha.1" },
                     children: [
                         {
-                            text: { name: "Evento.1" },
+                            text: { name: "Evento.1" }
                         },
                         {
                             text: { name: "Evento.2" }
                         },
                         {
-                            text: { name: "Evento.3" },
+                            text: { name: "Evento.3" }
                         },
                         {
-                            text: { name: "Evento.4" },
+                            text: { name: "Evento.4" }
                         }
                     ]
                 },
                 {
                     HTMLclass: "main-date",
                     text: { name: "Fecha.2" },
-                    collapsed: true,
+                    //collapsed: true,
                     children: [
                         {
                             text: { name: "Evento.1" }
@@ -132,10 +132,13 @@
                     text: { name: "Fecha.3" },
                     children: [
                         {
-                            text: { name: "Evento 1" }
+                            text: { name: "Evento.1" }
                         },
                         {
-                            text: { name: "Evento 2" }
+                            text: { name: "Evento.2" }
+                        },
+                        {
+                            text: { name: "Evento.3" }
                         }
                     ]
                 },
@@ -144,16 +147,16 @@
                     text: { name: "Fecha.4" },
                     children: [
                         {
-                            text: { name: "Evento.1" },
+                            text: { name: "Evento.1" }
                         },
                         {
                             text: { name: "Evento.2" }
                         },
                         {
-                            text: { name: "Evento.3" },
+                            text: { name: "Evento.3" }
                         },
                         {
-                            text: { name: "Evento.4" },
+                            text: { name: "Evento.4" }
                         }
                     ]
                 }

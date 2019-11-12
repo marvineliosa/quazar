@@ -1,7 +1,7 @@
 
-   var chart_config = {
+   var chart_config1 = {
         chart: {
-            container: "#collapsable-example",
+            container: "#collapsable-example1",
 
             animateOnInit: true,
 
@@ -103,9 +103,9 @@
         }
     };
 
-    var simple_chart_config = {
+    var simple_chart_config1 = {
         chart: {
-            container: "#OrganiseChart-simple",
+            container: "#OrganiseChart-simple1",
             hideRootNode: true,
             connectors: {
                 type: 'step',
@@ -125,11 +125,11 @@
                 connectorsSpeed: 700
             }
         },
-        
+
         nodeStructure: {
             text: { name: "Parent node" },
             children: [
-                {	
+                {
                     HTMLclass: "timeline main-date",
                     text: { desc: "", name: "Fecha.1" },
                     children: [
@@ -147,10 +147,10 @@
                         }
                     ]
                 },
-                {	
+                {
                     HTMLclass: "main-date",
                     text: { name: "Fecha.2" },
-                    collapsed: true,
+                    //collapsed: true,
                     children: [
                         {
                             text: { name: "Evento.1" }
@@ -165,10 +165,10 @@
                     text: { name: "Fecha.3" },
                     children: [
                         {
-                            text: { name: "Evento 1" }
+                            text: { name: "Evento.1" }
                         },
                         {
-                            text: { name: "Evento 2" }
+                            text: { name: "Evento.2" }
                         }
                     ]
                 },
@@ -177,23 +177,23 @@
                     text: { name: "Fecha.4" },
                     children: [
                         {
-                            text: { name: "Evento.1" },
+                            text: { name: "Evento.1" }
                         },
                         {
                             text: { name: "Evento.2" }
                         },
                         {
-                            text: { name: "Evento.3" },
+                            text: { name: "Evento.3" }
                         },
                         {
-                            text: { name: "Evento.4" },
+                            text: { name: "Evento.4" }
                         }
                     ]
                 }
             ]
         }
     };
-    
+
 
 /* Array approach
     var config = {
