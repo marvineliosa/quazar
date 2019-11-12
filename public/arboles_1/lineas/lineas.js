@@ -13,7 +13,7 @@ var morris1 = new Morris.Line({
   lineWidth: 1, //ancho de la linea
   // Labels for the ykeys -- will be displayed when you hover over the
   // chart.
-  labels: ['Value'],
+  labels: ['Nuevos Clientes'],
   resize: true,
   lineColors: ['#2CB4AC'] //colores de la linea
 });
@@ -24,14 +24,14 @@ var morris1 = new Morris.Line({
 $("#botonData").on("click",function(){
   console.log(morris1);
   var nuevaData = [
-    { year: '2016', value: 1 },
-    { year: '2017', value: 15 },
-    { year: '2018', value: 50 },
-    { year: '2019', value: 18 },
-    { year: '2020', value: 15 },
-    { year: '2021', value: 0 },
-    { year: '2022', value: 2 },
-    { year: '2023', value: 30 }
+    { year: '1', value: 1 },
+    { year: '2', value: 15 },
+    { year: '3', value: 50 },
+    { year: '4', value: 18 },
+    { year: '5', value: 15 },
+    { year: '6', value: 0 },
+    { year: '7', value: 2 },
+    { year: '8', value: 30 }
   ];
 
   morris1.setData (nuevaData);
