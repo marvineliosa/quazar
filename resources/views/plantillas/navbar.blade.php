@@ -11,7 +11,7 @@
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Listados</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-puzzle-piece"></i><a href="/socios">Líderes/Socios</a></li>
+                            <li><i class="fa fa-puzzle-piece"></i><a href="/socios">LDistribuidor independiente</a></li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
@@ -21,7 +21,7 @@
                         </ul>
                     </li>
 
-                    <li class="menu-title">Líderes/Socios</li><!-- /.menu-title -->
+                    <li class="menu-title">LDistribuidor independiente</li><!-- /.menu-title -->
 
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bar-chart"></i>Gráficos</a>
@@ -33,7 +33,7 @@
                     <li>
                         <a href="widgets.html"> <i class="menu-icon fa fa-sign-out"></i>Salir </a>
                     </li>
-                    
+
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>

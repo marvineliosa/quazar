@@ -240,11 +240,14 @@
 
 
     function RegistrarSocio(){
+      // var nombre = campo nombre
+      var marvin = 'datos';
       var success;
       var url = "/socios/registrar_socio";
       var dataForm = new FormData();
       dataForm.append('p1',"p1");
       dataForm.append('p2','p2');
+      dataForm.append('marvin',marvin);
       //lamando al metodo ajax
       metodoAjax(url,dataForm,function(success){
         //aquí se escribe todas las operaciones que se harían en el succes

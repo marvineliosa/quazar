@@ -1,6 +1,6 @@
 @extends('plantillas.menu')
 @section('content')
-  
+
   <div class="col-md-12">
       <div class="card">
           <div class="card-header">
@@ -14,7 +14,7 @@
                           <th>Nombre</th>
                           <th>Tipo de pago</th>
                           <th>Socios</th>
-                          <th>Bono R</th>
+                          <th>Bono Rápido</th>
                           <th>Bono Generacional</th>
                           <th>Acciones</th>
                       </tr>

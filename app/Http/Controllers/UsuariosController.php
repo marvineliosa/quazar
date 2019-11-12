@@ -18,7 +18,7 @@
          */
 
          public function RegistrarSocio(Request $request){
-           dd('epale');
+           dd($request['marvin']);
          }
 
     }

@@ -1,6 +1,6 @@
 @extends('plantillas.menu')
 @section('content')
-	
+
   <div class="col-md-12">
       <div class="card">
           <div class="card-header">
@@ -11,14 +11,40 @@
                   <thead>
                       <tr>
                           <th>Fecha</th>
-                          <th>Nombre</th>
                           <th>Socio</th>
+                          <th>Nombre</th>
                           <th>Concepto</th>
                           <th>Ingresos</th>
-                          <th>Egresos</th>
                           <th>Acciones</th>
                       </tr>
                   </thead>
+
+                      <tr class="table-primary">
+                          <th>11/11/2019</th>
+                          <th>Q131</th>
+                          <th>Fátima Rodriguez Valencia</th>
+                          <th>Activación</th>
+                          <th>$2,000</th>
+                          <th>Acciones</th>
+                      </tr>
+
+                      <tr>
+                          <th>11/11/2019</th>
+                          <th>Q131</th>
+                          <th>Wendy Rodriguez Valencia</th>
+                          <th>Recompra</th>
+                          <th>$2,000</th>
+                          <th>Acciones</th>
+                      </tr>
+
+		                      <tr class="table-primary">
+		                          <th>11/11/2019</th>
+		                          <th>Q131</th>
+		                          <th>Fátima Rodriguez Valencia</th>
+		                          <th>Activación</th>
+		                          <th>$2,000</th>
+		                          <th>Acciones</th>
+		                      </tr>
                   <tbody>
                   </tbody>
               </table>

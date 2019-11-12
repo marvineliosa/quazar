@@ -26,7 +26,10 @@ Route::get('/prueba', function () {
     return view('prueba');
 });
 Route::get('/socios', function () {
-    return view('listado_socios');
+    return view('listado_registros');
+});
+Route::get('/comisiones', function () {
+    return view('listado_comisiones');
 });
 
 Route::get('/arbol', function () {
