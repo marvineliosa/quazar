@@ -20,8 +20,16 @@ Route::get('/Registro_socio', 'Registro_socio@mostrarformulario');
 
 Route::post('/Registro_socio', 'Registro_socio@devuelverespuesta')->name('Registro_socio.devuelverespuesta');
 
+Route::post('/socios/registrar_socio', 'UsuariosController@RegistrarSocio');
+
 Route::get('/prueba', function () {
     return view('prueba');
+});
+Route::get('/socios', function () {
+    return view('listado_registros');
+});
+Route::get('/comisiones', function () {
+    return view('listado_comisiones');
 });
 
 Route::get('/arbol', function () {
@@ -34,6 +42,9 @@ Route::get('/arbol2', function () {
 
 Route::get('/arbol3', function () {
     return view('arbol4');
+});
+Route::get('/pedidos', function () {
+    return view('listado_pedidos');
 });
 
 Route::get('/formulario', function () {
