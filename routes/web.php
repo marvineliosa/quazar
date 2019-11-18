@@ -55,6 +55,5 @@ Route::get('/linea', function () {
     return view('linea');
 });
 
-Route::get('/arboles1', function () {
-    return view('arboles1');
-});
+
+//
