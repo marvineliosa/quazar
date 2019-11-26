@@ -9,9 +9,9 @@
     <link rel="apple-touch-icon" href="https://i.imgur.com/QRAUqs9.png">
     <link rel="shortcut icon" href="https://i.imgur.com/QRAUqs9.png">
 
-    <!--send help
+    <!--send help-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    -->
+
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
@@ -296,31 +296,35 @@
         <script src="https://cdn.jsdelivr.net/npm/simpleweather@3.1.0/jquery.simpleWeather.min.js"></script>
 
 
+    <!--send help-->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 
-    <!--
     <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.js"></script>
-    <script src="assets/js/init/fullcalendar-init.js"></script>-->
+    <script src="assets/js/init/fullcalendar-init.js"></script>
 
     <link href="{{asset('arboles_1/Treant.css')}}" rel="stylesheet">
     <link href="{{asset('arboles_1/collapsable.css')}}" rel="stylesheet">
     <link href="{{asset('arboles_1/perfect-scrollbar.css')}}" rel="stylesheet">
     <link href="{{asset('arboles_1/timeline.css')}}" rel="stylesheet">
 
-    <!--send help
-    <link href="{{asset('arboles_1/libs/morris.css')}}" rel="stylesheet">
-    <script src="{{asset('arboles_1/libs/morris.min.js')}}" charset="utf-8"></script>-->
+    <!--send help-->
+    <link href="{{asset('arboles_1/Graficas/libs/morris.css')}}" rel="stylesheet">
+    <!--<script src="{{asset('arboles_1/Graficas/libs/morris.min.js')}}" charset="utf-8"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
 
     <script src="{{asset('arboles_1/collapsable.js')}}"></script>
-    <!-- <script src="{{asset('arboles_1/collapsable1.js')}}"></script> -->
     <script src="{{asset('arboles_1/raphael.js')}}"></script>
     <script src="{{asset('arboles_1/Treant.js')}}"></script>
     <script src="{{asset('arboles_1/jquery.easing.js')}}"></script>
     <script src="{{asset('arboles_1/jquery.min.js')}}"></script>
     <script src="{{asset('arboles_1/timeline.js')}}"></script>
     <script src="{{asset('arboles_1/timeline2.js')}}"></script>
+
+    <!--<script src="lineas.js" charset="utf-8"></script>-->
+    @yield('content_dos')
+
 
     <script src="{{asset('arboles_1/collapsable2.js')}}"></script>
 

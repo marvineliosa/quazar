@@ -52,7 +52,7 @@ Route::get('/formulario', function () {
 });
 
 Route::get('/linea', function () {
-    return view('linea');
+    return view('arboles1');
 });
 
 
