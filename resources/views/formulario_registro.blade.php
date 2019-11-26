@@ -8,7 +8,7 @@
     	<!-- Credit Card -->
         <div id="registro_socio">
             <div class="card-body">
-                <div id="registro_socio" onclick="RegistrarSocio()">
+                <div id="registro_socio">
                 <!-- <div action="/Registro_socio.devuelverespuesta" method="POST" name="sentMessage" id="registro_socio"> -->
                     <div class="form-group text-center font-weight-bold">
                       <div class="card-header">
@@ -173,22 +173,13 @@
 
 
                           <div class="row">
-                                <div class="col-md-4">
-                                  <div class="form-group">
-                                    <label for="calle" class=" form-control-label">Banco</label>
-                                    <br>
-                                    <select data-placeholder="Seleccione su banco preferencial " class="standardSelect" tabindex="1">
-                                      <option value="Bancomer">Bancomer</option>
-                                      <option value="Banco Azteca">Banco Azteza</option>
-                                      <option value="Banamex">Banamex</option>
-                                      <option value="Sntander">Santander</option>
-                                      <option value="Otro...">Otro...</option>
-                                      <!-- <div class="form-group"><label for="otro" class=" form-control-label">Ingrese su banco preferencial</label><input  class="form-control"  id="banco2" type="text" placeholder="Ingrese su Banco preferencial" required="required" data-validation-required-message="Porfavor ingrese un banco valido" ></div> -->
-                                    </select>
-                                  </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                  <label for="calle" class=" form-control-label">Banco</label>
+                                  <input  class="form-control"  id="banco" type="text" placeholder="Banco" required="required" data-validation-required-message="Porfavor ingrese su banco preferencial">
                                 </div>
-
-                                <div class="col-md-8">
+                            </div>
+                                <div class="col-md-6">
                                     <div class="form-group">
                                       <label for="calle" class=" form-control-label">Clave Interbancaria</label>
                                       <input  class="form-control"  id="clave.interbancaria" type="text" placeholder="Clave Interbancaria" required="required" data-validation-required-message="Porfavor ingrese su clave interbancaria a 16 digitos">
@@ -219,7 +210,7 @@
                                 </div>
                             </div>
                           <div>
-                              <button id="payment-button" type="submit" class="btn btn-lg btn-info btn-block">
+                              <button id="payment-button" class="btn btn-lg btn-info btn-block" onclick="RegistrarSocio()">
                                    <i class="fa fa-lock fa-lg"></i>&nbsp;
                                   <span id="payment-button-amount">Enviar</span>
                                   <span id="payment-button-sending" style="display:none;">Sending…</span>
@@ -237,23 +228,54 @@
 
   <script>
      // $("#cc-payment").val(123456);
-
+     // window.onload=function() {
+  		// 	$("#nombre").val('Leonardo Axel de la Sagrada Concepción de Jisus');
+  		// }
 
     function RegistrarSocio(){
       // var nombre = campo nombre
       var marvin = 'datos';
-      var success;
+      // var nombre = document.getElementById('nombre').value;
+      var nombre = $("#nombre").val();
+      var sexo = 'MASCULINO';
+      var mail = $("#correo").val();
+      var calle = $("#calle").val();
+      var numext = $("#num.ext").val();
+      var numint = $("#num.int").val();
+      var cp = $("#cp").val();
+      var colonia = $("#colonia").val();
+      var localidad = $("#localidad").val();
+      var telcasa = $("#tel.casa").val();
+      var telcelular= $("#tel.cel").val();
+      var curp = $("#tel.curp").val();
+      var FechaNac = $("#fecha.nac").val();
+      var entidad = $("#entidad.nac").val();
+      var EstadoCivil = 'SOLTER@';
+      var banco = $("#banco").val();
+      var clave = $("#clave.interbancaria").val();
+      var patrocinador = $("#id.patrocinador").val();
+      var upline = $("#id.up.line.directo").val();
+      var beneficiario = $("#beneficiario").val();
+
+
+      console.log(mail);
+      alert(mail);
+
+
+
+/*
+      var json;
       var url = "/socios/registrar_socio";
       var dataForm = new FormData();
       dataForm.append('p1',"p1");
       dataForm.append('p2','p2');
       dataForm.append('marvin',marvin);
       //lamando al metodo ajax
-      metodoAjax(url,dataForm,function(success){
+      metodoAjax(url,dataForm,function(json){
         //aquí se escribe todas las operaciones que se harían en el succes
         //la variable success es el json que recibe del servidor el método AJAX
         MensajeModal("TITULO DEL MODAL","MENSAJE DEL MODAL");
-      });
+      });//*/
     }
 
 
@@ -285,11 +307,10 @@
           error : function(xhr, status) {
             $("#textoModalMensaje").text('Existió un problema con la operación');
             $("#modalMensaje").modal();
-            MensajeModal('¡ERROR!','Existió un problema, intentelo de nuevo, si el problema persiste favor de reportarlo a la extensión --.')
+            MensajeModal('¡ERROR!','Existió un problema, intentelo de nuevo, si el problema persiste favor de reportarlo al número --.')
           },
           complete : function(xhr, status){
              $("#modalCarga").modal('hide');
-             $("#nombre_producto").focus();
           }
           });//*/
         }
