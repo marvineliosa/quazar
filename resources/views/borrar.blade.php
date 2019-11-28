@@ -7,9 +7,10 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 
-    <link rel="stylesheet" href="../libs/morris.css">
-    <script src="../libs/morris.min.js" charset="utf-8"></script>
-
+    <!-- <link rel="stylesheet" href="../libs/morris.css"> -->
+    <!-- <script src="../libs/morris.min.js" charset="utf-8"></script> -->
+    <script src="{{asset('arboles_1/Graficas/libs/morris.min.js')}}"></script>
+    <link rel="stylesheet" href="{{asset('arboles_1/Graficas/libs/morris.css')}}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <title>Graficas de lineas</title>
@@ -126,6 +127,6 @@
           morris1.setData(nuevaData);
       });
 
-    
+
     </script>
 </html>

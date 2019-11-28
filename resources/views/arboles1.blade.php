@@ -1,7 +1,4 @@
 @extends('plantillas.menu')
-@section ('content_dos')
-<script src="{{asset('arboles_1/Graficas/lineas/lineas.js')}}"></script>
-@endsection
 @section('content')
 
     <!--arbol-->
@@ -23,11 +20,28 @@
     <div class="col-lg-12 col-md-12">
         <div class="card">
             <div class="card-body">
-              <h2> Gráfica de linea</h2>
-              <hr>
-              <div id="myfirstchart" >
+              <div class="container">
+                <h1>Gráficas</h1>
+                <hr>
+
+                <div class="row">
+
+                  <div class="col-md-6">
+                    <h2>Grafica de linea</h2>
+                    <hr>
+                    <div id="myfirstchart" ></div>
+
+                  </div>
+                  <div class="col-md-6">
+                    <h2>Grafica de area</h2>
+                    <hr>
+                    <div id="graph" ></div>
+
+                  </div>
+                </div>
+
+                <button type="button" id="botData" class="btn btn-primary">Cargar</button>
               </div>
-              <button type="button" id="botonData" class="btn btn-primary">Cagar Data</button>
             </div>
 
           </div>
@@ -37,9 +51,6 @@
 @section('script')
 
   <script type="text/javascript">
-
-  tree = new Treant( chart_config3 );
-  line = new Treant( myfirstchart );
 
   var morris1 = new Morris.Line({
     // ID of the element in which to draw the chart.
@@ -125,6 +136,7 @@
 
       morris1.setData(nuevaData);
   });
+
   </script>
 
 @endsection

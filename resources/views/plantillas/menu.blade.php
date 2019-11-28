@@ -9,10 +9,6 @@
     <link rel="apple-touch-icon" href="https://i.imgur.com/QRAUqs9.png">
     <link rel="shortcut icon" href="https://i.imgur.com/QRAUqs9.png">
 
-    <!--send help-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
@@ -311,8 +307,11 @@
 
     <!--send help-->
     <link href="{{asset('arboles_1/Graficas/libs/morris.css')}}" rel="stylesheet">
-    <!--<script src="{{asset('arboles_1/Graficas/libs/morris.min.js')}}" charset="utf-8"></script>-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+    <!--<script src="{{asset('arboles_1/Graficas/libs/morris.min.js')}}" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>-->
+    <script src="{{asset('arboles_1/Graficas/libs/morris.min.js')}}" charset="utf-8"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <script src="{{asset('arboles_1/collapsable.js')}}"></script>
     <script src="{{asset('arboles_1/raphael.js')}}"></script>
@@ -322,8 +321,7 @@
     <script src="{{asset('arboles_1/timeline.js')}}"></script>
     <script src="{{asset('arboles_1/timeline2.js')}}"></script>
 
-    <!--<script src="lineas.js" charset="utf-8"></script>-->
-    @yield('content_dos')
+
 
 
     <script src="{{asset('arboles_1/collapsable2.js')}}"></script>

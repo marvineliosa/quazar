@@ -51,7 +51,7 @@ Route::get('/formulario', function () {
     return view('formulario_registro');
 });
 
-Route::get('/linea', function () {
+Route::get('/lineas', function () {
     return view('arboles1');
 });
 
