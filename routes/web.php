@@ -11,20 +11,48 @@
 |
 */
 
+//ruta de pagina de inicio
 Route::get('/', function () {
     return view('pagina_inicio');
 });
 
+//RUTAS DE AXEL (SI ESTAN BIEN :V)
+//otra forma de simplificar rutas
+ // Route::get('/NuevoSocio','UsuarioSocioController@index');
+ // Route::get('/NuevoSocio/create','UsuarioSocioController@create');
+ //
 
-Route::get('/Registro_socio', 'Registro_socio@mostrarformulario');
 
-Route::post('/Registro_socio', 'Registro_socio@devuelverespuesta')->name('Registro_socio.devuelverespuesta');
 
-Route::post('/socios/registrar_socio', 'UsuariosController@RegistrarSocio');
+//
+Route::get('/formulario', 'UsuarioSocioController@create');
+Route::get('/usuario_socio/edit','UsuarioSocioController@edit');
 
-Route::get('/prueba', function () {
-    return view('prueba');
-});
+
+//otra forma de simplificar aun mas las rutas
+//creamos todas las rutas para acceder al controlador por todos sus metodos
+Route::resource('usuario_socio','UsuarioSocioController');
+
+
+//RUTAS DE AXEL
+//rutas de formulario antigua (esta mal)
+// Route::get('/Registro_socio', 'Registro_socio@mostrarformulario');
+//
+// Route::post('/Registro_socio', 'Registro_socio@devuelverespuesta')->name('Registro_socio.devuelverespuesta');
+//
+// Route::post('/socios/registrar_socio', 'UsuariosController@RegistrarSocio');
+
+// Route::get('/formulario', function () {
+//     return view('formulario_registro');
+// });
+
+//ruta de prueba laravel
+//
+// Route::get('/prueba', function () {
+//     return view('prueba');
+// });
+
+//rutas para mostrar datos del formulario de comisiones
 Route::get('/socios', function () {
     return view('listado_registros');
 });
@@ -32,6 +60,9 @@ Route::get('/comisiones', function () {
     return view('listado_comisiones');
 });
 
+
+
+//rutas de gera
 Route::get('/arbol', function () {
     return view('arbol2');
 });
@@ -45,10 +76,6 @@ Route::get('/arbol3', function () {
 });
 Route::get('/pedidos', function () {
     return view('listado_pedidos');
-});
-
-Route::get('/formulario', function () {
-    return view('formulario_registro');
 });
 
 Route::get('/lineas', function () {

@@ -18,8 +18,8 @@ class CreateQuaRelUsuarioBeneficiario extends Migration
              $table->unsignedBigInteger('FK_USUARIO');
             $table->foreign('FK_USUARIO')->references('USUARIO_ID')->on('QUA_USUARIOS');
 
-            $table->unsignedBigInteger('FK_BENEFICIARIO');
-           $table->foreign('FK_BENEFICIARIO')->references('BENEFICIARIO_ID')->on('QUA_BENEFICIARIOS');
+           //  $table->unsignedBigInteger('FK_BENEFICIARIO');
+           // $table->foreign('FK_BENEFICIARIO')->references('BENEFICIARIO_ID')->on('QUA_BENEFICIARIOS');
 
         });
     }
