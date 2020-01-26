@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\usuario_socio;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\Request; //indispensable para usar Request de los JSON
+// use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Storage;//gestion de archivos
+// use Illuminate\Support\Facades\DB;//consulta a la base de datos
 
 
 class UsuarioSocioController extends Controller

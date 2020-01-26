@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -38,9 +39,14 @@
     <section class="page-section" id="Registro_socio">
       <div class="container-fluid slider b-flex justify-content-center align-items-baseline">
         <div class="animated fadeIn">
+
+
+
+
         <!-- REGISTRO  SOCIO -->
           <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Registro de un nuevo socio QUASAR</h2>
         <div class="row justify-content-center">
+
           <form action="/Registro_socio.devuelverespuesta" method="POST" name="sentMessage" id="contactForm">
           <!---  @csrf --->
             <div class="col-md-6 col-md-12">
@@ -49,6 +55,11 @@
                       <strong>Registro de un nuevo socio</strong> <small> QUASAR</small>
                     </div>
                     <div class="card-body card-block">
+
+
+
+
+
 
                     <!---AQUI EMPIEZA EL FORMULARIO ---------------------------------->
                         <div class="form-group"><label for="nombre" class=" form-control-label">Nombre</label><input  class="form-control"  id="nombre" type="text" placeholder="Ingrese su nombre completo" required="required" data-validation-required-message="Porfavor ingrese un nombre valido" ></div>
@@ -204,6 +215,8 @@
               </div>
             </form>
           </div>
+
+
         </div>
       </div>
   </section>

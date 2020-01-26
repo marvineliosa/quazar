@@ -35,19 +35,12 @@ Route::resource('usuario_socio','UsuarioSocioController');
 
 
 //RUTAS DE AXEL
-//rutas de formulario antigua (esta mal)
-// Route::get('/Registro_socio', 'Registro_socio@mostrarformulario');
-//
-// Route::post('/Registro_socio', 'Registro_socio@devuelverespuesta')->name('Registro_socio.devuelverespuesta');
-//
-// Route::post('/socios/registrar_socio', 'UsuariosController@RegistrarSocio');
+//rutas de formulario antigua (solo es para ver un ejemplo de la vista)
+Route::get('/Registro_socio', 'Registro_socio@mostrarformulario');
 
-// Route::get('/formulario', function () {
-//     return view('formulario_registro');
-// });
 
-//ruta de prueba laravel
-//
+// ruta de prueba laravel
+
 // Route::get('/prueba', function () {
 //     return view('prueba');
 // });

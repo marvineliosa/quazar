@@ -19,7 +19,7 @@ class CreateUsuarioSociosTable extends Migration
             $table->string('USUARIO_NOMBRE');
             $table->string('USUARIO_APELLIDOPATERNO');
             $table->string('USUARIO_APELLIDOMATERNO');
-            // $table->boolean('USUARIO_SEXO');
+            $table->string('USUARIO_SEXO');
             $table->string('USUARIO_CORREO');
             $table->string('USUARIO_CALLE');
             $table->integer('USUARIO_NUM_EXT');
@@ -33,7 +33,7 @@ class CreateUsuarioSociosTable extends Migration
             $table->string('USUARIO_CURP');
             $table->date('USUARIO_FECHA_NAC');
             $table->string('USUARIO_ENTIDAD_NAC');
-            // $table->boolean('USUARIO_ESTADO_CIVIL');
+            $table->string('USUARIO_ESTADO_CIVIL');
             $table->string('USUARIO_BANCO');
             $table->string('USUARIO_CLAVE_INTERBANCARIA');
 
