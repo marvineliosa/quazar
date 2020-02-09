@@ -16,6 +16,13 @@ class UsuarioSocioController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function VistaFormularioRegistro(){
+       return view('usuario_socio.formulario_registro');
+     }
+
+     
+
     public function index()
     {
         //declaramos un indice llamado usuario_socio
@@ -51,8 +58,17 @@ class UsuarioSocioController extends Controller
         usuario_socio::insert($datosUsuario);
         //retorno una respuesta en forma de json de la info del formulario
         // return response()->json($datosUsuario);
-        return redirect('usuario_socio');
+        return redirect('usuario_socio')->with('Mensaje','Usuario quasar agregado con exito'); //con with retornamos en la vista nuestro mensaje con la variable 'Mensaje'
     }
+
+
+// // Peticion ajax al server
+//     if($request->ajax())
+//     {
+//         $name = $request->input('name');
+//         Response->json($name);
+//     }
+
 
     /**
      * Display the specified resource.
@@ -97,8 +113,10 @@ class UsuarioSocioController extends Controller
         //si es que si es igual, actualiza la info del id seleccionado
         usuario_socio::where('id','=',$id)->update($datosUsuario);
 
-        $usuario= usuario_socio::findOrFail($id);
-        return view('usuario_socio.edit',compact('usuario'));
+        // $usuario= usuario_socio::findOrFail($id);
+        // return view('usuario_socio.edit',compact('usuario'));
+
+return redirect('usuario_socio')->with('Mensaje','Usuarios Quasar modificado con exito');
 
     }
 
@@ -116,8 +134,12 @@ class UsuarioSocioController extends Controller
 
         //elimino el registro seleccionado pasandole el parametro $id
         usuario_socio::destroy($id);
-        return redirect('usuario_socio');
+        // return redirect('usuario_socio');
 
+
+        return redirect('usuario_socio')->with('Mensaje','Usuarios Quasar Eliminado con exito');
+
+// Retorna a la vista, pero antes elimina el registro
        //  usuario_socio::find($id)->delete();
        // return redirect('/usuario_socio');
 

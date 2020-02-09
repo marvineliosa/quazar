@@ -21,9 +21,6 @@ Route::get('/', function () {
  // Route::get('/NuevoSocio','UsuarioSocioController@index');
  // Route::get('/NuevoSocio/create','UsuarioSocioController@create');
  //
-
-
-
 //
 Route::get('/formulario', 'UsuarioSocioController@create');
 Route::get('/usuario_socio/edit','UsuarioSocioController@edit');
@@ -32,6 +29,7 @@ Route::get('/usuario_socio/edit','UsuarioSocioController@edit');
 //otra forma de simplificar aun mas las rutas
 //creamos todas las rutas para acceder al controlador por todos sus metodos
 Route::resource('usuario_socio','UsuarioSocioController');
+Route::get('/registro_socio2', 'UsuarioSocioController@VistaFormularioRegistro');
 
 
 //RUTAS DE AXEL
