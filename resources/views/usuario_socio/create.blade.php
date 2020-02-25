@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -20,25 +19,46 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/lib/chosen/chosen.min.css">
 
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/chartist@0.11.0/dist/chartist.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/jqvmap@1.5.1/dist/jqvmap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/weathericons@2.1.0/css/weather-icons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.css" rel="stylesheet" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
     </head>
     <body>
 
+  <section class="page-section" id="Registro_socio">
+    <div class="container-fluid slider b-flex justify-content-center align-items-baseline">
+      <div class="animated fadeIn">
+
+
+
     <div class="Content justify-content-center">
-      <div class="col-lg-12 col-md-12">
+      <div class="col-lg-6 col-md-12">
         <div class="card">
+          <div class="card-header">
+
+            <div class="form-group text-center font-weight-bold">
+              <strong>Registro de un nuevo socio</strong> <small> QUASAR</small>
+            </div>
+
+          </div>
       	<!-- Credit Card -->
           <div id="registro_socio">
               <div class="card-body">
                   <div id="registro_socio">
-                  <!-- <div action="/Registro_socio.devuelverespuesta" method="POST" name="sentMessage" id="registro_socio"> -->
-                      <div class="form-group text-center font-weight-bold">
-                        <div class="card-header">
 
-                          <strong>Registro de un nuevo socio</strong> <small> QUASAR</small>
-                        </div>
-                      </div>
+
+
+
+
+
+
+
                       <!-- aqui empieza el formulario -->
                     <form  action="{{url('/usuario_socio')}}" method="post" enctype="multipart/form-data">
                       {{csrf_field()}}
@@ -55,8 +75,12 @@
                     </div>
                   </div>
                 </div>
-              </body>
-            </html>
+              </div>
+            </div>
+          </section>
+        </body>
+      </html>
+
 
 
 

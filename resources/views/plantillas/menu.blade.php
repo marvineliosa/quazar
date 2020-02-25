@@ -77,7 +77,7 @@
         <!-- DATA TABLES -->
         <link rel="stylesheet" href="{{asset('assets/css/lib/datatable/dataTables.bootstrap.min.css')}}">
 
-        <!-- <link href="{{asset('vendors/iCheck/skins/flat/green.css')}}" rel="stylesheet"> -->
+        <!-- <link href="{{asset('vendors/iCheck/skins/flat/green.css')}}" rel="stylesheet"> --> 
 
        <style>
         #weatherWidget .currentDesc {

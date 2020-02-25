@@ -58,7 +58,7 @@
 
                                 </button> -->
 
-                                 <input type="submit"  value="Modificar">
+                                 <!-- <input type="submit"  value="Modificar"> -->
                             <!--    <a href="{{url('usuario_socio')}}">Regresar</a> -->
 
                             </div>

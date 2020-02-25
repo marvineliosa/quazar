@@ -17,17 +17,12 @@ class UsuarioSocioController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-     public function VistaFormularioRegistro(){
-       return view('usuario_socio.formulario_registro');
-     }
-
-     
 
     public function index()
     {
         //declaramos un indice llamado usuario_socio
         //nos paginara las entradas por 5 registros
-        $datos['usuario_socio']= usuario_socio::paginate(5);
+        $datos['usuario_socio']= usuario_socio::paginate(10);
         return view('usuario_socio.index',$datos);
     }
 
@@ -62,12 +57,6 @@ class UsuarioSocioController extends Controller
     }
 
 
-// // Peticion ajax al server
-//     if($request->ajax())
-//     {
-//         $name = $request->input('name');
-//         Response->json($name);
-//     }
 
 
     /**

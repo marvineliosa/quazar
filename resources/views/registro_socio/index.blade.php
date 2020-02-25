@@ -1,20 +1,38 @@
+<!-- INICIO despliegue de datos -->
+
 @extends('plantillas.menu')
 @section('content')
 
 
-@if(Session::has('Mensaje')){{
+ @if(Session::has('Mensaje')){{
 		Session::get('Mensaje')
 }}
+
 @endif
-<a href="{{url('usuario_socio/create')}}" class="btn btn-success">Agregar Socio Quasar</a>
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+    <title>Menu</title>
+  </head>
+  <body>
+
+
+<a href="{{url('registro_socio/create')}}" class="btn btn-success">Agregar Socio Quasar</a>
 <br>
 <br>
-<div class="col-md-12">
+
+<!-- <div class="col-md-12">
 		<div class="card">
 				<div class="card-header">
 						<strong class="card-title">Socios Registrados</strong>
 				</div>
-					<div class="card-body">
+					<div class="card-body"> -->
+
 						<table id="tabla_datos" class="table table-bordered table-hover">
 								<thead>
                   <tr>
@@ -44,7 +62,7 @@
                   </tr>
 								</thead>
 								<tbody>
-                  @foreach ($usuario_socio as $usuario)
+                  @foreach ($registro_socio as $usuario)
                   <tr class="table-primary">
                     <td>{{$loop->iteration}}</td>
                     <td>{{$usuario->USUARIO_NOMBRE}} {{$usuario->USUARIO_APELLIDOPATERNO}} {{$usuario->USUARIO_APELLIDOMATERNO}}</td>
@@ -68,48 +86,45 @@
                     <td>{{$usuario->USUARIO_ID_PATROCINADOR}}</td>
                     <td>{{$usuario->USUARIO_ID_UPLINE_DIRECTO}}</td>
                     <td>{{$usuario->USUARIO_BENEFICIARIO}}</td>
+
                     <td>
-
-
-                        <a class="btn btn-warning" href="{{ url('/usuario_socio/'.$usuario->id.'/edit')}}">Editar
-
-                      	</a>
-												|
-
-                      <!-- aqui uso este form para borrar el registro seleccionado  CON ESTA LINEA NO QUEDO -->
-                      <!-- <form method="post" action= "{{ url('/usuario_socio'.$usuario->id) }}"> -->
+                       <a class="btn btn-warning" href="{{ url('/registro_socio/'.$usuario->id.'/edit')}}">
+                            Editar
+                         </a>
+                          |
                       <!-- CON ESTA LINEA DE CODIGO SI BORRO EL REGISTRO SELECCIONADO  -->
-                        <form method="post" style="display:inline" action="{{ url('/usuario_socio', ['usuario' => $usuario->id]) }}" >
+                         <form method="post" style="display:inline" action="{{ url('/registro_socio', ['usuario' => $usuario->id]) }}" >
                         {{csrf_field()}}
-                        <!-- solicitud unica que identifica el tipo de solicitud que envio a traves del formulario -->
                         {{ method_field('DELETE') }}
-                        <button class="btn btn-danger" type="submit" onclick="return confirm('¿Borrar?');" name="button">Borrar</button>
-                      </form>
+                         <button class="btn btn-danger" type="submit" onclick="return confirm('¿Borrar?');" name="button">Borrar</button>
+
+                        </form>
+
                     </td>
                   </tr>
                   @endforeach
+					  </tbody>
+		      </table>
+        <!-- </div>
+      </div>
+    </div>   -->
+  </body>
+</html>
 
-
-								</tbody>
-						</table>
-				</div>
-		</div>
-</div>
-
-<!-- <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
-
 
 	<script>
 		$(document).ready(function() {
 			$('#tabla_datos').DataTable();
 		} );
-	</script> -->
-@endsection
+	</script>
 
-@section('script')
-<script>
+  @endsection
 
-</script>
-@endsection
+  @section('script')
+  <script>
+
+  </script>
+  @endsection

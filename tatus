@@ -1,0 +1,209 @@
+[33mcommit ee22e0def987e074490200f63836219772ab1ce6[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: apsel <axel170995@gmail.com>
+Date:   Sun Feb 9 01:22:55 2020 -0600
+
+    Falta hacer validaciones, datatables, ajax, no perder navbar, cambiar algunas rutas, modal con informacion del usuario, historial para el boton borrar, entre otros detalles xD
+
+[33mcommit 76886db28c0edf7d2c8d36891e6f248bbacfe3af[m
+Author: apsel <axel170995@gmail.com>
+Date:   Sat Jan 25 22:36:16 2020 -0600
+
+    Se hicieron arreglaron unos errores en las vistas de edit, create, y index, asi como se agregaron los valores para los radiobuttons, Falta hacer el guardado de los datos en un archivo para el boton borrar
+
+[33mcommit bf4b4dc8b2962d377503c7fdd0dcf0eeb042df8f[m
+Author: apsel <axel170995@gmail.com>
+Date:   Fri Jan 24 18:24:02 2020 -0600
+
+    insercion de los datos a la base de datos, edicion de informacion, y borrado del usuario (el borrado esta mal, pues debe de guardar la informacion en un archivo)
+
+[33mcommit 3cf8fdfb6084422085ec7d69ebf75b6e1c993224[m
+Author: Gerardo Quechol <zaratelogan@gmail.com>
+Date:   Thu Nov 28 10:49:08 2019 -0600
+
+    Lineas nuevas al 100% real no fake sin virus mega
+
+[33mcommit e41f528dafc6e35c8ac1e272c5f2d18f5305725c[m
+Author: Gerardo Quechol <zaratelogan@gmail.com>
+Date:   Mon Nov 25 20:08:14 2019 -0600
+
+    Ultimos cambios Gerardo
+
+[33mcommit 3a1c969e662a417900215c9feba60ca0056d44c4[m
+Author: Axel <axel170995@gmail.com>
+Date:   Mon Nov 25 19:54:01 2019 -0600
+
+    Se empezo a obtener la informacion del formulario por ajax
+
+[33mcommit 5e12bbc1e6946ddd47b36659954c66401e54fbdb[m
+Author: Gerardo Quechol <zaratelogan@gmail.com>
+Date:   Mon Nov 18 12:23:29 2019 -0600
+
+    cambios sin errores en formulario
+
+[33mcommit 2911692ade4663358382cb78466ac0e86f1c74ce[m
+Merge: b18e71a 7a7ea26
+Author: Gerardo Quechol <zaratelogan@gmail.com>
+Date:   Thu Nov 14 13:47:26 2019 -0600
+
+    proyecto sin errores
+
+[33mcommit b18e71adeece041c26e5c082ad45356c07f72039[m
+Author: Gerardo Quechol <zaratelogan@gmail.com>
+Date:   Mon Nov 11 19:35:45 2019 -0600
+
+    lineas subidas con mapas
+
+[33mcommit b18bbf98792039385eeeace661f276469d2a020e[m
+Author: Gerardo Quechol <zaratelogan@gmail.com>
+Date:   Mon Nov 11 19:35:16 2019 -0600
+
+    lineas subidas con mapas
+
+[33mcommit 7a7ea268f800244d58c1c42e04c0517c11622222[m
+Author: Axel <axel170995@gmail.com>
+Date:   Mon Nov 11 19:32:25 2019 -0600
+
+    Cambios hechos en la revision
+
+[33mcommit 4d6801a280127bb551538796bd34126b736ae80b[m
+Merge: 9ea6a62 07f2cab
+Author: Axel <axel170995@gmail.com>
+Date:   Mon Nov 11 17:48:16 2019 -0600
+
+    Merge branch 'master' of https://github.com/marvineliosa/quazar
+
+[33mcommit 9ea6a626ce5fc85d4693994b6af0b647f6fb6921[m
+Author: Axel <axel170995@gmail.com>
+Date:   Mon Nov 11 17:43:17 2019 -0600
+
+    agregado de registros de ejemplo en la tabla de socios
+
+[33mcommit 07f2cab6943bacd504cdfc27af511c0836784f36[m
+Author: Marvin Eliosa <marvineliosa@gmail.com>
+Date:   Mon Nov 11 15:35:56 2019 -0600
+
+    Se crean listados
+
+[33mcommit f8978a110870781c6f17e632d7278978dabb419b[m
+Author: Marvin Eliosa <marvineliosa@gmail.com>
+Date:   Mon Nov 11 13:03:15 2019 -0600
+
+    Se agregan datos a la vista de listado de socios y se modifica el navbar para solo tener pocos elementos
+
+[33mcommit 584647577eef75fe8da181b802e820b12c641ef8[m
+Merge: f2b937d dc7371f
+Author: Marvin Eliosa <marvineliosa@gmail.com>
+Date:   Mon Nov 11 11:34:35 2019 -0600
+
+    Merge branch 'master' of https://github.com/marvineliosa/quazar
+
+[33mcommit f2b937daec29555c27aaaf356b9d8fa65b831d9b[m
+Author: Marvin Eliosa <marvineliosa@gmail.com>
+Date:   Mon Nov 11 11:34:23 2019 -0600
+
+    Se crea el listado de socios, solo la visualizacion preliminar
+
+[33mcommit dc7371f1dd7a82af822abf5a5f5fcd8c5069b07f[m
+Merge: 9ea4393 0973ec1
+Author: Axel <axel170995@gmail.com>
+Date:   Mon Nov 11 11:32:52 2019 -0600
+
+    solucion de conflictos
+
+[33mcommit 9ea4393a3baae85d19b24e88b6ef4e16c0d7e839[m
+Author: Axel <axel170995@gmail.com>
+Date:   Mon Nov 11 11:09:00 2019 -0600
+
+    se finaliza el formulario de registro_socio ya completoado
+
+[33mcommit 0973ec18f1c87a910fa4895007648156bd7168c6[m
+Author: Marvin Eliosa <marvineliosa@gmail.com>
+Date:   Mon Nov 11 10:41:36 2019 -0600
+
+    Se soluciona problemas con Ajax, existia una funcion que generaba un error al utilizar las funciones de jQuery.
+
+[33mcommit 551d1936e5376d006b6a7bfbff8d8577e884be39[m
+Author: Marvin Eliosa Abaroa <marvineliosa@hotmail.com>
+Date:   Mon Nov 11 08:28:56 2019 -0600
+
+    Se resuelve error con api del clima que generaba conflictos, aun existe error con conexion en jquery y ajax
+
+[33mcommit 94c533321f1d64561d42338a95510918dad714c4[m
+Author: Marvin Eliosa <marvineliosa@gmail.com>
+Date:   Tue Nov 5 13:15:14 2019 -0600
+
+    Se arreglan las rutas de las imagenes en la pagina de inicio
+
+[33mcommit 10b89fdea35c8fbe5e1e791d54ab705c2a65cd7f[m
+Author: Gerardo Quechol <zaratelogan@gmail.com>
+Date:   Mon Nov 4 18:22:04 2019 -0600
+
+    Commit temporal
+
+[33mcommit 3b71323d6fa216d19aa12542a1aa1d5b566d0fe8[m
+Author: Marvin Eliosa <marvineliosa@gmail.com>
+Date:   Mon Nov 4 13:53:43 2019 -0600
+
+    Solucion de conflictos
+
+[33mcommit 67b3e3e1e98944f9447daf2d7f8431bcc8d97383[m
+Merge: 7e27e40 dbc9c30
+Author: Axel <axel170995@gmail.com>
+Date:   Mon Nov 4 13:44:38 2019 -0600
+
+    Es el mismo commit que el anterior pero agregue el boton que me faltaba
+
+[33mcommit dbc9c308e8c7c55e6d3329f4bce66b19737d0546[m
+Author: Marvin Eliosa <marvineliosa@gmail.com>
+Date:   Mon Nov 4 13:32:32 2019 -0600
+
+    Se agrega la vista para el formulario de registro.
+
+[33mcommit 7e27e40ad558f4d8eeb19e147efc30958f68d386[m
+Author: Axel <axel170995@gmail.com>
+Date:   Mon Nov 4 12:49:41 2019 -0600
+
+    Se crea la vista Registro_socio y su controlador
+
+[33mcommit ca7585264aaf741c2fcdf0ed4b25c8ee438b3570[m
+Author: Marvin Eliosa Abaroa <marvineliosa@hotmail.com>
+Date:   Mon Nov 4 03:41:18 2019 -0600
+
+    Se agrega la vista de arboles al sistema
+
+[33mcommit 4cd5958122ca9bd18b8b3738bd7b402623ad8529[m
+Merge: bd6dd54 a2a06a4
+Author: Marvin Eliosa Abaroa <marvineliosa@hotmail.com>
+Date:   Mon Nov 4 01:33:33 2019 -0600
+
+    Merge branch 'master' of https://github.com/marvineliosa/quazar
+
+[33mcommit bd6dd54eaa155f34598d6d82e3cc2f826d793949[m
+Author: Marvin Eliosa Abaroa <marvineliosa@hotmail.com>
+Date:   Mon Nov 4 01:33:21 2019 -0600
+
+    Se agrega el dashboard al sistema
+
+[33mcommit a2a06a46812defc441af97086c6cf5f387efca85[m
+Author: Axel <axel170995@gmail.com>
+Date:   Mon Oct 28 00:32:32 2019 -0600
+
+    Se agregaros 2 tablas mas, la tabla de usuarios y su relacion con la tabla beneficiarios
+
+[33mcommit 451d20aba6eac4c26bd7e70c561a3f1999a5035a[m
+Author: Marvin Eliosa <marvineliosa@hotmail.com>
+Date:   Fri Oct 25 04:47:07 2019 -0500
+
+    Se crean dos tablas para el sistema
+
+[33mcommit 58aca89e38f8e216466d55458e3e9f930cca61e5[m
+Author: Marvin Eliosa Abaroa <marvineliosa@hotmail.com>
+Date:   Tue Oct 22 23:41:50 2019 -0500
+
+    Se integra la pagina principal al proyecto
+
+[33mcommit ed764f6825230a53b928f5a2a6207644ac771992[m
+Author: Marvin Eliosa Abaroa <marvineliosa@hotmail.com>
+Date:   Tue Oct 22 22:54:20 2019 -0500
+
+    Se crea el proyecto vacio de laravel
