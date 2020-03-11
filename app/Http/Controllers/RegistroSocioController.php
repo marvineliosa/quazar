@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Registro_socio;
-use Illuminate\Http\Request;
+use Illuminate\Http\Request;//indispensable para usar Request de los JSON
+// use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Storage;//gestion de archivos
+// use Illuminate\Support\Facades\DB;//consulta a la base de datos
 
 class RegistroSocioController extends Controller
 {
@@ -41,7 +44,39 @@ class RegistroSocioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+
+        $campos=[
+          'USUARIO_NOMBRE'=>'required|string|max:100',
+          'USUARIO_APELLIDOPATERNO'=>'required|string|max:100',
+          'USUARIO_APELLIDOMATERNO'=>'required|string|max:100',
+          // 'USUARIO_SEXO'=>'required',
+          'USUARIO_CORREO'=>'required|email',
+          'USUARIO_CALLE'=>'required|string|max:100',
+          'USUARIO_NUM_EXT'=>'required',
+          'USUARIO_NUM_INT'=>'required',
+          'USUARIO_CP'=>'required|max:5',
+          'USUARIO_COLONIA'=>'required|string|max:100',
+          'USUARIO_LOCALIDAD'=>'required|string|max:100',
+          'USUARIO_ENTIDAD'=>'required|string|max:100',
+
+          'USUARIO_TEL_CASA'=>'required|max:10',
+          'USUARIO_TEL_CEL'=>'required|max:10',
+          'USUARIO_CURP'=>'required|string|max:18',
+          'USUARIO_FECHA_NAC'=>'required',
+          'USUARIO_ENTIDAD_NAC'=>'required|string|max:100',
+          // 'USUARIO_ESTADO_CIVIL'=>'required',
+          'USUARIO_BANCO'=>'required|string|max:100',
+          'USUARIO_CLAVE_INTERBANCARIA'=>'required|string|max:16',
+          'USUARIO_ID_PATROCINADOR'=>'required',
+          'USUARIO_ID_UPLINE_DIRECTO'=>'required',
+          'USUARIO_BENEFICIARIO'=>'required'
+
+        ];
+
+        $Mensaje=["required"=>'El :attribute es requerido'];
+        $this->validate($request,$campos,$Mensaje);
+
         //todo lo que se envia del formulario se almacena en $datosEmpleado por medio del metodo store
         // $datosUsuario=request()->all();
 
@@ -91,6 +126,50 @@ class RegistroSocioController extends Controller
      */
     public function update(Request $request, $id)
     {
+
+      $campos=[
+        'USUARIO_NOMBRE'=>'required|string|max:100',
+        'USUARIO_APELLIDOPATERNO'=>'required|string|max:100',
+        'USUARIO_APELLIDOMATERNO'=>'required|string|max:100',
+        // 'USUARIO_SEXO'=>'required',
+        'USUARIO_CORREO'=>'required|email',
+        'USUARIO_CALLE'=>'required|string|max:100',
+        'USUARIO_NUM_EXT'=>'required',
+        'USUARIO_NUM_INT'=>'required',
+        'USUARIO_CP'=>'required|max:5',
+        'USUARIO_COLONIA'=>'required|string|max:100',
+        'USUARIO_LOCALIDAD'=>'required|string|max:100',
+        'USUARIO_ENTIDAD'=>'required|string|max:100',
+
+        'USUARIO_TEL_CASA'=>'required|max:10',
+        'USUARIO_TEL_CEL'=>'required|max:10',
+        'USUARIO_CURP'=>'required|string|max:18',
+        'USUARIO_FECHA_NAC'=>'required',
+        'USUARIO_ENTIDAD_NAC'=>'required|string|max:100',
+        // 'USUARIO_ESTADO_CIVIL'=>'required',
+        'USUARIO_BANCO'=>'required|string|max:100',
+        'USUARIO_CLAVE_INTERBANCARIA'=>'required|string|max:16',
+        'USUARIO_ID_PATROCINADOR'=>'required',
+        'USUARIO_ID_UPLINE_DIRECTO'=>'required',
+        'USUARIO_BENEFICIARIO'=>'required'
+
+      ];
+
+      $Mensaje=["required"=>'El :attribute es requerido'];
+      $this->validate($request,$campos,$Mensaje);
+
+
+
+
+
+
+
+
+
+
+
+
+
       //recepciono la info y lo coloco en $datosUsuario
       $datosUsuario=request()->except(['_token','_method']);
       //el where actualiza de a cuerdo al id preguntando si el id es igual al id que me enviaron

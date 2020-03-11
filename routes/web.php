@@ -19,27 +19,30 @@ Route::get('/', function () {
 Route::get('/prueba', function () {
     return view('prueba');
 });
-//rutas de formulario antigua (solo es para ver un ejemplo de la vista)
-Route::get('/Registro_socio', 'Registro_socio@mostrarformulario');
 ///////////////////////////////////////////////////////////////////
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 
 //RUTAS DE AXEL (SI ESTAN BIEN :V)
 
-Route::get('/formulario', 'UsuarioSocioController@index');
+Route::get('/formulario', 'RegistroSocioController@index');
 
 
-Route::get('/registro_socio', 'RegistroSocioController@index');
+// Route::get('/api/registro_socios', function () {
+//   return datatables()->eloquent(User::query())->toJson();
+//
+// });
+
+//otra forma de simplificar aun mas las rutas
+// Route::get('/registro_socio', 'RegistroSocioController@index');
 Route::get('/registro_socio/create', 'RegistroSocioController@create');
+//creamos todas las rutas para acceder al controlador por todos sus metodos
 Route::resource('registro_socio','RegistroSocioController');
 
 
-//otra forma de simplificar aun mas las rutas
-//creamos todas las rutas para acceder al controlador por todos sus metodos
-Route::resource('usuario_socio','UsuarioSocioController');
+
 
 
 

@@ -4,10 +4,10 @@
 @section('content')
 
 
- @if(Session::has('Mensaje')){{
-		Session::get('Mensaje')
-}}
-
+ @if(Session::has('Mensaje'))
+  <div class="alert alert-success" role="alert">
+      {{	Session::get('Mensaje')}}
+  </div>
 @endif
 
 
@@ -15,6 +15,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <!-- cabeceras para los DataTables -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
     <title>Menu</title>
@@ -26,42 +27,45 @@
 <br>
 <br>
 
-<!-- <div class="col-md-12">
-		<div class="card">
-				<div class="card-header">
+<div class="col-md-12">
+		<div class="card border-info mb-3">
+				<div class="card-header ">
 						<strong class="card-title">Socios Registrados</strong>
 				</div>
-					<div class="card-body"> -->
-
-						<table id="tabla_datos" class="table table-bordered table-hover">
+					<div class="card-body">
+ <!-- id=tabla_datos -->
+						<table id="registro_socios" class="table table-striped table-bordered table-hover" >
 								<thead>
                   <tr>
-                    <th>#</th>
-                    <th>Nombre</th>
-                    <th>Sexo</th>
-                    <th>Correo Electronico</th>
-                    <th>Calle</th>
-                    <th>N° Ext</th>
-                    <th>N° Int</th>
-                    <th>CP</th>
-                    <th>Colonia</th>
-                    <th>Localidad</th>
-                    <th>Entidad</th>
-                    <th>Telefono casa</th>
-                    <th>Telefono Celular</th>
-                    <th>Curp</th>
-                    <th>Fecha de Nacimiento</th>
-                    <th>Entidd de Nacimiento</th>
-                    <th>Estado civil</th>
-                    <th>Banco</th>
-                    <th>Clave Interbancaria</th>
-                    <th>ID de Patrocinador</th>
-                    <th>ID de Upline Directo </th>
-                    <th>Beneficiario</th>
-                    <th>Acciones</th>
+                    <!-- <th>#</th> -->
+                    <th><strong>Nombre</strong></th>
+                    <th><strong>Apellido Paterno</strong></th>
+                    <th><strong>Apellido Materno</strong></th>
+                    <th><strong>Sexo</strong></th>
+                    <th><strong>Correo Electronico</strong></th>
+                    <th><strong>Calle</strong></th>
+                    <th><strong>N° Ext</strong></th>
+                    <th><strong>N° Int</strong></th>
+                    <th><strong>CP</strong></th>
+                    <th><strong>Colonia</strong></th>
+                    <th><strong>Localidad</strong></th>
+                    <th><strong>Entidad</strong></th>
+                    <th><strong>Telefono casa</strong></th>
+                    <th><strong>Telefono Celular</strong></th>
+                    <th><strong>Curp</strong></th>
+                    <th><strong>Fecha de Nacimiento</strong></th>
+                    <th><strong>Entidad de Nacimiento</strong></th>
+                    <th><strong>Estado civil</strong></th>
+                    <th><strong>Banco</strong></th>
+                    <th><strong>Clave Interbancaria</strong></th>
+                    <th><strong>ID de Patrocinador</strong></th>
+                    <th><strong>ID de Upline Directo</strong></th>
+                    <th><strong>Beneficiario</strong></th>
+                    <th><strong>Acciones</strong></th>
+
                   </tr>
 								</thead>
-								<tbody>
+								<!-- <tbody>
                   @foreach ($registro_socio as $usuario)
                   <tr class="table-primary">
                     <td>{{$loop->iteration}}</td>
@@ -92,7 +96,7 @@
                             Editar
                          </a>
                           |
-                      <!-- CON ESTA LINEA DE CODIGO SI BORRO EL REGISTRO SELECCIONADO  -->
+                      CON ESTA LINEA DE CODIGO SI BORRO EL REGISTRO SELECCIONADO
                          <form method="post" style="display:inline" action="{{ url('/registro_socio', ['usuario' => $usuario->id]) }}" >
                         {{csrf_field()}}
                         {{ method_field('DELETE') }}
@@ -103,11 +107,11 @@
                     </td>
                   </tr>
                   @endforeach
-					  </tbody>
+					  </tbody> -->
 		      </table>
-        <!-- </div>
+        </div>
       </div>
-    </div>   -->
+    </div>
   </body>
 </html>
 
@@ -117,14 +121,49 @@
 
 	<script>
 		$(document).ready(function() {
-			$('#tabla_datos').DataTable();
-		} );
-	</script>
+			  $('#registro_socios').DataTable({
+        //procesa la consulta con php del lado del servidor
+        "serverSide":true,
+        "ajax":"{{ url('api/registro_socios') }}",
+        "columns":[
+          // {data:'id'},
+          {data:'USUARIO_NOMBRE'},
+          {data:'USUARIO_APELLIDOPATERNO'},
+          {data:'USUARIO_APELLIDOMATERNO'},
+          {data:'USUARIO_SEXO'},
+          {data:'USUARIO_CORREO'},
+          {data:'USUARIO_CALLE'},
+          {data:'USUARIO_NUM_EXT'},
+          {data:'USUARIO_NUM_INT'},
+          {data:'USUARIO_CP'},
+          {data:'USUARIO_COLONIA'},
+          {data:'USUARIO_LOCALIDAD'},
+          {data:'USUARIO_ENTIDAD'},
+          {data:'USUARIO_TEL_CASA'},
+          {data:'USUARIO_TEL_CEL'},
+          {data:'USUARIO_CURP'},
+          {data:'USUARIO_FECHA_NAC'},
+          {data:'USUARIO_ENTIDAD_NAC'},
+          {data:'USUARIO_ESTADO_CIVIL'},
+          {data:'USUARIO_BANCO'},
+          {data:'USUARIO_CLAVE_INTERBANCARIA'},
+          {data:'USUARIO_ID_PATROCINADOR'},
+          {data:'USUARIO_ID_UPLINE_DIRECTO'},
+          {data:'USUARIO_BENEFICIARIO'},
+          {data:'btn'}
 
+        ]
+      });
+		});
+	</script>
   @endsection
 
   @section('script')
-  <script>
 
-  </script>
+    <script>
+
+
+
+    </script>
+
   @endsection

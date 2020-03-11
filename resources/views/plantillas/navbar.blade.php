@@ -17,8 +17,8 @@
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-th"></i>Formularios</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-table"></i><a href="/usuario_socio/create">Registrar Socio</a></li>
-                              <li><i class="fa fa-table"></i><a href="/usuario_socio">Ver soscios</a></li>
+                            <li><i class="fa fa-table"></i><a href="/registro_socio/create">Registrar Socio</a></li>
+                              <li><i class="fa fa-table"></i><a href="/registro_socio">Ver soscios</a></li>
                         </ul>
                     </li>
 
