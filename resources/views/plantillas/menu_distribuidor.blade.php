@@ -115,32 +115,20 @@
             }
 
         </style>
-
-
-
     </head>
-
-    <!-- colores
-    Azul
-    CMYK:  C99, M83, Y36, K2    #022AA0     fuerte
-    RGB: R0, G68 y B114         #004472     claro
-
-    Amarillo
-    CMYK: C:10, M:0, Y:87 K:0   #E6FF21     fuerte
-    RGB: R:239, G:232, B:81     #EFE851     claro -->
 
     <body>
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        @include('plantillas.navbar')
+        @include('plantillas.navbar_distribuidor')
         <!-- Right Panel -->
         <div id="right-panel" class="right-panel">
             <!-- Header-->
-            <header id="header" class="header" style="background-color: #E6FF21;">
+            <header id="header" class="header">
                 <div class="top-left">
-                    <div class="navbar-header" style="background-color: #E6FF21;">
+                    <div class="navbar-header">
                         <!-- <a class="navbar-brand" href="./"><img src="images/logo3.png" alt="Logo"></a> -->
-                        <a class="navbar-brand" href="./"><img src="images/logo.png" alt="Logo" style="width: 100px; height:auto ;" align="top"></a>
-                        <!-- <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a> -->
+                        <a class="navbar-brand" href="./"><img src="images/logo.png" alt="Logo" style="width: 40%; height: auto;"></a>
+                        <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a>
                         <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
                     </div>
                 </div>

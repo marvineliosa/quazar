@@ -23,6 +23,7 @@ class RegistroSocioController extends Controller
         $datos['registro_socio']= registro_socio::paginate();
         return view('registro_socio.index',$datos);
 
+
     }
 
     /**
@@ -47,30 +48,31 @@ class RegistroSocioController extends Controller
 
 
         $campos=[
-          'USUARIO_NOMBRE'=>'required|string|max:100',
-          'USUARIO_APELLIDOPATERNO'=>'required|string|max:100',
-          'USUARIO_APELLIDOMATERNO'=>'required|string|max:100',
-          // 'USUARIO_SEXO'=>'required',
-          'USUARIO_CORREO'=>'required|email',
-          'USUARIO_CALLE'=>'required|string|max:100',
-          'USUARIO_NUM_EXT'=>'required',
-          'USUARIO_NUM_INT'=>'required',
-          'USUARIO_CP'=>'required|max:5',
-          'USUARIO_COLONIA'=>'required|string|max:100',
-          'USUARIO_LOCALIDAD'=>'required|string|max:100',
-          'USUARIO_ENTIDAD'=>'required|string|max:100',
+                 'USUARIO_Q'=>'required|string|max:100',
+                 'USUARIO_NOMBRE'=>'required|string|max:100',
+                 'USUARIO_APELLIDOPATERNO'=>'required|string|max:100',
+                 'USUARIO_APELLIDOMATERNO'=>'required|string|max:100',
+                 'USUARIO_SEXO'=>'required',
+                 'USUARIO_CORREO'=>'required|email',
+                 'USUARIO_CALLE'=>'required|string|max:100',
+                 // 'USUARIO_NUM_EXT'=>'required',
+                 'USUARIO_NUM_INT'=>'required',
+                 'USUARIO_CP'=>'required|max:5',
+                 'USUARIO_COLONIA'=>'required|string|max:100',
+                 'USUARIO_LOCALIDAD'=>'required|string|max:100',
+                 'USUARIO_ENTIDAD'=>'required|string|max:100',
 
-          'USUARIO_TEL_CASA'=>'required|max:10',
-          'USUARIO_TEL_CEL'=>'required|max:10',
-          'USUARIO_CURP'=>'required|string|max:18',
-          'USUARIO_FECHA_NAC'=>'required',
-          'USUARIO_ENTIDAD_NAC'=>'required|string|max:100',
-          // 'USUARIO_ESTADO_CIVIL'=>'required',
-          'USUARIO_BANCO'=>'required|string|max:100',
-          'USUARIO_CLAVE_INTERBANCARIA'=>'required|string|max:16',
-          'USUARIO_ID_PATROCINADOR'=>'required',
-          'USUARIO_ID_UPLINE_DIRECTO'=>'required',
-          'USUARIO_BENEFICIARIO'=>'required'
+                 'USUARIO_TEL_CASA'=>'required|max:10',
+                 'USUARIO_TEL_CEL'=>'required|max:10',
+                 'USUARIO_CURP'=>'required|string|max:18',
+                 'USUARIO_FECHA_NAC'=>'required',
+                 'USUARIO_ENTIDAD_NAC'=>'required|string|max:100',
+                 'USUARIO_ESTADO_CIVIL'=>'required',
+                 'USUARIO_BANCO'=>'required|string|max:100',
+                 'USUARIO_CLAVE_INTERBANCARIA'=>'required|string|max:16',
+                 'USUARIO_ID_PATROCINADOR'=>'required',
+                 'USUARIO_ID_UPLINE_DIRECTO'=>'required',
+                 'USUARIO_BENEFICIARIO'=>'required'
 
         ];
 
@@ -84,7 +86,7 @@ class RegistroSocioController extends Controller
         //insertamos la info en la bd
         registro_socio::insert($datosUsuario);
         //retorno una respuesta en forma de json de la info del formulario
-        // return response()->json($datosUsuario);
+         // return response()->json($datosUsuario);
          return redirect('registro_socio')->with('Mensaje','Usuario quasar agregado con exito'); //con with retornamos en la vista nuestro mensaje con la variable 'Mensaje'
 
 
@@ -96,9 +98,10 @@ class RegistroSocioController extends Controller
      * @param  \App\Registro_socio  $registro_socio
      * @return \Illuminate\Http\Response
      */
-    public function show(Registro_socio $registro_socio)
+    public function show($id)
     {
-        //
+      $usuario= registro_socio::findOrFail($id);
+      return view('registro_socio.historial',compact('usuario'));
     }
 
     /**
@@ -128,47 +131,36 @@ class RegistroSocioController extends Controller
     {
 
       $campos=[
-        'USUARIO_NOMBRE'=>'required|string|max:100',
-        'USUARIO_APELLIDOPATERNO'=>'required|string|max:100',
-        'USUARIO_APELLIDOMATERNO'=>'required|string|max:100',
-        // 'USUARIO_SEXO'=>'required',
-        'USUARIO_CORREO'=>'required|email',
-        'USUARIO_CALLE'=>'required|string|max:100',
-        'USUARIO_NUM_EXT'=>'required',
-        'USUARIO_NUM_INT'=>'required',
-        'USUARIO_CP'=>'required|max:5',
-        'USUARIO_COLONIA'=>'required|string|max:100',
-        'USUARIO_LOCALIDAD'=>'required|string|max:100',
-        'USUARIO_ENTIDAD'=>'required|string|max:100',
+           'USUARIO_Q'=>'required|string|max:100',
+           'USUARIO_NOMBRE'=>'required|string|max:100',
+           'USUARIO_APELLIDOPATERNO'=>'required|string|max:100',
+           'USUARIO_APELLIDOMATERNO'=>'required|string|max:100',
+           'USUARIO_SEXO'=>'required',
+           'USUARIO_CORREO'=>'required|email',
+           'USUARIO_CALLE'=>'required|string|max:100',
+           // 'USUARIO_NUM_EXT'=>'required',
+           'USUARIO_NUM_INT'=>'required',
+           'USUARIO_CP'=>'required|max:5',
+           'USUARIO_COLONIA'=>'required|string|max:100',
+           'USUARIO_LOCALIDAD'=>'required|string|max:100',
+           'USUARIO_ENTIDAD'=>'required|string|max:100',
 
-        'USUARIO_TEL_CASA'=>'required|max:10',
-        'USUARIO_TEL_CEL'=>'required|max:10',
-        'USUARIO_CURP'=>'required|string|max:18',
-        'USUARIO_FECHA_NAC'=>'required',
-        'USUARIO_ENTIDAD_NAC'=>'required|string|max:100',
-        // 'USUARIO_ESTADO_CIVIL'=>'required',
-        'USUARIO_BANCO'=>'required|string|max:100',
-        'USUARIO_CLAVE_INTERBANCARIA'=>'required|string|max:16',
-        'USUARIO_ID_PATROCINADOR'=>'required',
-        'USUARIO_ID_UPLINE_DIRECTO'=>'required',
-        'USUARIO_BENEFICIARIO'=>'required'
+           'USUARIO_TEL_CASA'=>'required|max:10',
+           'USUARIO_TEL_CEL'=>'required|max:10',
+           'USUARIO_CURP'=>'required|string|max:18',
+           'USUARIO_FECHA_NAC'=>'required',
+           'USUARIO_ENTIDAD_NAC'=>'required|string|max:100',
+           'USUARIO_ESTADO_CIVIL'=>'required',
+           'USUARIO_BANCO'=>'required|string|max:100',
+           'USUARIO_CLAVE_INTERBANCARIA'=>'required|string|max:16',
+           'USUARIO_ID_PATROCINADOR'=>'required',
+           'USUARIO_ID_UPLINE_DIRECTO'=>'required',
+           'USUARIO_BENEFICIARIO'=>'required'
 
       ];
 
       $Mensaje=["required"=>'El :attribute es requerido'];
       $this->validate($request,$campos,$Mensaje);
-
-
-
-
-
-
-
-
-
-
-
-
 
       //recepciono la info y lo coloco en $datosUsuario
       $datosUsuario=request()->except(['_token','_method']);
@@ -192,6 +184,10 @@ class RegistroSocioController extends Controller
      */
     public function destroy($id)
     {
+
+      // $usuario['registro_socio']= 0;
+
+
       // busco todos los registros correspondientes al id que me estan enviando
             $usuario= registro_socio::findOrFail($id);
 
@@ -199,8 +195,7 @@ class RegistroSocioController extends Controller
         registro_socio::destroy($id);
         // return redirect('registro_socio');
 
-        return redirect('registro_socio')->with('Mensaje','Usuarios Quasar Eliminado con exito');
-
+        return redirect('registro_socio',$usuario)->with('Mensaje','Usuarios Quasar Eliminado con exito');
 
     }
 }

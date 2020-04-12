@@ -1,3 +1,4 @@
+
 <!-- seccion para crear registro del socio -->
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -20,10 +21,14 @@
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
-    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script>
+
+
+
   </head>
   <body>
-@if(count($errors)>0)
+    <!-- Muestra validaciones pero en forma de lista -->
+<!-- @if(count($errors)>0)
 <div class="alert alert-danger" role="alert">
   <ul>
     @foreach($errors->all() as $error)
@@ -32,9 +37,9 @@
 
   </ul>
 </div>
-@endif
+@endif -->
     <div class="Content justify-content-center">
-      <div class="col-lg-6 col-md-12">
+      <div class="col-lg-12 col-md-12">
         <div class="card">
           <div class="card-header">
 
@@ -69,7 +74,6 @@
     </section>
   </body>
 </html>
-
 
 
 

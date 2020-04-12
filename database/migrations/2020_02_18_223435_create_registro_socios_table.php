@@ -15,6 +15,8 @@ class CreateRegistroSociosTable extends Migration
     {
         Schema::create('registro_socios', function (Blueprint $table) {
           $table->bigIncrements('id');
+
+              $table->string('USUARIO_Q')->nullable($value = true);
               $table->string('USUARIO_NOMBRE')->nullable($value = true);
               $table->string('USUARIO_APELLIDOPATERNO')->nullable($value = true);
               $table->string('USUARIO_APELLIDOMATERNO')->nullable($value = true);

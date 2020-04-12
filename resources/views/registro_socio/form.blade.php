@@ -2,13 +2,22 @@
 <!--  -->
 
 <div class="row">
-    <div class="col-3">
+
+  <div class="col-3">
+      <div class="form-group">
+          <label for="USUARIO_Q" class="control-label mb-1">{{'Num° Q'}}</label>
+          <input  class="form-control {{$errors->has('USUARIO_Q')?'is-invalid':''}}  " name="USUARIO_Q" id="USUARIO_Q" type="text" value="{{ isset($usuario->USUARIO_Q)?$usuario->USUARIO_Q:old('USUARIO_Q') }}" placeholder="Ingrese su nombre"  data-validation-required-message="Porfavor ingrese un nombre valido">
+          {!! $errors ->first('USUARIO_Q','<div class="invalid-feedback">:message</div>') !!}
+      </div>                                                                         <!--     IF ternario, donde pongo el valor de USUARIO_NOMBRE unicamente si USUARIO_NOMBRE esta lleno, de lo contrario, imprimimos vacio--->
+  </div>
+
+    <div class="col-3"> 
         <div class="form-group">
             <label for="USUARIO_NOMBRE" class="control-label mb-1">{{'Nombre'}}</label>
             <input  class="form-control {{$errors->has('USUARIO_NOMBRE')?'is-invalid':''}}  " name="USUARIO_NOMBRE" id="USUARIO_NOMBRE" type="text" value="{{ isset($usuario->USUARIO_NOMBRE)?$usuario->USUARIO_NOMBRE:old('USUARIO_NOMBRE') }}" placeholder="Ingrese su nombre"  data-validation-required-message="Porfavor ingrese un nombre valido">
             {!! $errors ->first('USUARIO_NOMBRE','<div class="invalid-feedback">:message</div>') !!}
         </div>                                                                         <!--     IF ternario, donde pongo el valor de USUARIO_NOMBRE unicamente si USUARIO_NOMBRE esta lleno, de lo contrario, imprimimos vacio--->
-</div>
+    </div>
 
      <div class="col-3">
         <div class="form-group">
@@ -28,25 +37,30 @@
         </div>
     </div>
 
-     <div class="col-3">
-        <label class="control-label mb-1">{{'Sexo'}}</label>
-          <div class="form-check">
+    <div class="col-3">
+       <label class="control-label mb-1">{{'Genero'}}</label>
+         <div class="form-check">
 
-              <div class="radio">
-                  <label for="USUARIO_SEXO" class="form-check-label ">
-                      <input type="radio" id="Masculino" name="USUARIO_SEXO" value="{{ isset($usuario->USUARIO_SEXO)?$usuario->USUARIO_SEXO:'' }}" class="form-check-input" >{{'Masculino'}}
-                  </label>
-              </div>
+             <div class="radio">
+                 <label for="USUARIO_SEXO" class="form-check-label ">
+                     <input class="form-check-input {{$errors->has('USUARIO_SEXO')?'is-invalid':''}} " type="radio" id="Masculino" name="USUARIO_SEXO" value="Masculino" class="form-check-input" >{{'Masculino'}}
+                     {!! $errors ->first('USUARIO_SEXO','<div class="invalid-feedback">:message</div>') !!}
 
-              <div class="radio">
-                  <label for="USUARIO_SEXO" class="form-check-label ">
-                      <input type="radio" id="Femenino" name="USUARIO_SEXO" value="{{ isset($usuario->USUARIO_SEXO)?$usuario->USUARIO_SEXO:'' }}" class="form-check-input">{{'Femenino'}}
-                  </label>
-              </div>
+                 </label>
+             </div>
 
-          </div>
-     </div>
-</div>
+             <div class="radio">
+                 <label for="USUARIO_SEXO" class="form-check-label ">
+                     <input class="form-check-input {{$errors->has('USUARIO_SEXO')?'is-invalid':''}} " type="radio" id="Femenino" name="USUARIO_SEXO" value="Femenino" class="form-check-input">{{'Femenino'}}
+                     {!! $errors ->first('USUARIO_SEXO','<div class="invalid-feedback">:message</div>') !!}
+
+                 </label>
+             </div>
+
+         </div>
+    </div>
+  </div>
+
 
 <div class="row">
     <div class="col-12">
@@ -181,28 +195,33 @@
       </div>
 
       <div class="col-md-4">
-        <div class="row form-group">
-            <div class="col col-md-12"><label  class=" form-control-label">{{'Estado Civil:'}}</label></div>
-            <div class="col col-md-5">
-                <div class="form-check">
+          <div class="row form-group">
+              <div class="col col-md-12"><label  class=" form-control-label">{{'Estado Civil:'}}</label></div>
+              <div class="col col-md-5">
+                  <div class="form-check">
 
-                    <div class="radio">
-                        <label for="USUARIO_ESTADO_CIVIL" class="form-check-label ">
-                            <input type="radio" id="solter@" name="USUARIO_ESTADO_CIVIL" value="{{ isset($usuario->USUARIO_ESTADO_CIVIL)?$usuario->USUARIO_ESTADO_CIVIL:'' }}" class="form-check-input">{{'Solter@'}}
-                        </label>
-                    </div>
+                      <div class="radio">
+                          <label for="USUARIO_ESTADO_CIVIL" class="form-check-label ">
+                              <input class="form-check-input {{$errors->has('USUARIO_ESTADO_CIVIL')?'is-invalid':''}} " type="radio" id="solter@" name="USUARIO_ESTADO_CIVIL" value="soler@" class="form-check-input">{{'Solter@'}}
+                              {!! $errors ->first('USUARIO_ESTADO_CIVIL','<div class="invalid-feedback">:message</div>') !!}
+                          </label>
+                      </div>
 
-                    <div class="radio">
-                        <label for="USUARIO_ESTADO_CIVIL" class="form-check-label ">
-                            <input type="radio" id="casad@" name="USUARIO_ESTADO_CIVIL" value="{{ isset($usuario->USUARIO_ESTADO_CIVIL)?$usuario->USUARIO_ESTADO_CIVIL:'' }}" class="form-check-input">{{'Casad@'}}
-                        </label>
-                    </div>
+                      <div class="radio">
+                          <label for="USUARIO_ESTADO_CIVIL" class="form-check-label ">
+                              <input class="form-check-input {{$errors->has('USUARIO_ESTADO_CIVIL')?'is-invalid':''}} " type="radio" id="casad@" name="USUARIO_ESTADO_CIVIL" value="casad@" class="form-check-input">{{'Casad@'}}
+                              {!! $errors ->first('USUARIO_ESTADO_CIVIL','<div class="invalid-feedback">:message</div>') !!}
+                          </label>
+                      </div>
 
-                </div>
-            </div>
-        </div>
+                  </div>
+              </div>
+          </div>
       </div>
   </div>
+
+
+
 
   <div class="row">
     <div class="col-md-6">
@@ -231,7 +250,7 @@
               <div class="input-group">
                 <div class="input-group-addon"><i class="fa fa-asterisk"></i></div>
                 <input  class="form-control {{$errors->has('USUARIO_ID_PATROCINADOR')?'is-invalid':'' }}"  id="USUARIO_ID_PATROCINADOR" name="USUARIO_ID_PATROCINADOR" type="number"value="{{ isset($usuario->USUARIO_ID_PATROCINADOR)?$usuario->USUARIO_ID_PATROCINADOR:old('USUARIO_ID_PATROCINADOR') }}" placeholder="ID de patrocinador"  data-validation-required-message="Porfavor ingrese un ID valido" >
-                {!! $errors ->first('USUARIO_ID_PATROCINADOR','<div class="invalid-feedback">:message</div>') !!}
+                {!! $errors ->first('USUARIO_ID_PATROCINADORr','<div class="invalid-feedback">:message</div>') !!}
               </div>
             </div>
         </div>
@@ -259,11 +278,13 @@
     <div class="row">
       <div class="col-md-6">
         <!--- si es muestraform crear, se motrara agregar, si es modo editar, se mostrara modificar class="btn btn-success" class="fa fa-magic"--->
-        <button type="submit" name="" value="{{ $muestraform=='crear' ? 'Agregar':'Modificar' }}" id="payment-button" class="btn btn-lg btn-info btn-block" onclick="RegistrarSocio()">
+        <button type="submit" name="" value="{{ $muestraform =='crear' ? 'Agregar':'Modificar' }}" id="payment-button" class="btn btn-lg btn-info btn-block" onclick="RegistrarSocio()">
              <i class="fa fa-lock fa-lg"></i>&nbsp;
             <span id="payment-button-amount">Enviar</span>
             <span id="payment-button-sending" style="display:none;">Sending…</span>
         </button>
+
+
       </div>
       <div class="col-md-6">
         <a href="{{url('registro_socio')}}" class="btn btn-lg btn-info btn-block">Regresar</a>

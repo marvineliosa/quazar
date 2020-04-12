@@ -1,7 +1,9 @@
 
+
     <!-- Left Panel -->
     <aside id="left-panel" class="left-panel">
-        <nav class="navbar navbar-expand-sm navbar-default">
+        <nav class="navbar navbar-expand-sm navbar-default" style="background-color: #E6FF21;">
+          <!-- "navbar navbar-light" style="background-color: #E6FF21;" -->
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
@@ -27,13 +29,24 @@
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bar-chart"></i>Gráficos</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-fort-awesome"></i><a href="/arbol">Generacional</a></li>
+                            <li><i class="menu-icon fa fa-fort-awesome"></i><a href="arbol2">Generacional</a></li>
                             <li><i class="menu-icon ti-themify-logo"></i><a href="font-themify.html">Directos</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="widgets.html"> <i class="menu-icon fa fa-sign-out"></i>Salir </a>
                     </li>
+                    <li>
+                      <h1>xd</h1>
+                    </li>
+                    <li>
+                      <h1>xd</h1>
+                    </li>
+                    <li>
+                      <h1>xd</h1>
+                    </li>
+
+
 
                 </ul>
             </div><!-- /.navbar-collapse -->
