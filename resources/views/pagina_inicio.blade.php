@@ -67,9 +67,9 @@
       <!-- Icon Divider -->
       <div class="divider-custom">
         <div class="divider-custom-line"></div>
-        <div class="divider-custom-icon">
-          <i class="fas fa-star"></i>
-        </div>
+          <!--- <div class="divider-custom-icon">
+            <i class="fas fa-star"></i>
+          </div> --->
         <div class="divider-custom-line"></div>
       </div>
 
@@ -182,12 +182,13 @@
   </section>
 
   <!-- About Section -->
-  <section class="page-section bg-primary text-white mb-0" id="about">
+  <section class="page-section bg-secondary text-white mb-0" id="about">
     <div class="container">
 
       <!-- About Section Heading -->
-      <h2 class="page-section-heading text-center text-uppercase text-white">Nosotros</h2>
-
+      
+        <h2 class="page-section-heading text-center text-uppercase text-white">Nosotros</h2>
+      
       <!-- Icon Divider -->
       <div class="divider-custom divider-light">
         <div class="divider-custom-line"></div>
@@ -357,9 +358,9 @@ BIENESTAR.</h2>
                 <!-- Icon Divider -->
                 <div class="divider-custom">
                   <div class="divider-custom-line"></div>
-                  <div class="divider-custom-icon">
+                 <!--- <div class="divider-custom-icon">
                     <i class="fas fa-star"></i>
-                  </div>
+                    </div> --->
                   <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Modal - Image -->
@@ -396,9 +397,9 @@ BIENESTAR.</h2>
                 <!-- Icon Divider -->
                 <div class="divider-custom">
                   <div class="divider-custom-line"></div>
-                  <div class="divider-custom-icon">
+                  <!---<div class="divider-custom-icon">
                     <i class="fas fa-star"></i>
-                  </div>
+                  </div> --->
                   <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Modal - Image -->
@@ -436,9 +437,9 @@ SUS COMPAÑÍAS (SIN SABER LO QUE HOY SON)</h2>
                 <!-- Icon Divider -->
                 <div class="divider-custom">
                   <div class="divider-custom-line"></div>
-                  <div class="divider-custom-icon">
+                   <!--- <div class="divider-custom-icon">
                     <i class="fas fa-star"></i>
-                  </div>
+                  </div> --->
                   <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Modal - Image -->
@@ -476,9 +477,9 @@ SUS COMPAÑÍAS (SIN SABER LO QUE HOY SON)</h2>
                 <!-- Icon Divider -->
                 <div class="divider-custom">
                   <div class="divider-custom-line"></div>
-                  <div class="divider-custom-icon">
+                  <!--- <div class="divider-custom-icon">
                     <i class="fas fa-star"></i>
-                  </div>
+                  </div> --->
                   <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Modal - Image -->
@@ -515,9 +516,9 @@ SUS COMPAÑÍAS (SIN SABER LO QUE HOY SON)</h2>
                 <!-- Icon Divider -->
                 <div class="divider-custom">
                   <div class="divider-custom-line"></div>
-                  <div class="divider-custom-icon">
+                  <!--- <div class="divider-custom-icon">
                     <i class="fas fa-star"></i>
-                  </div>
+                  </div> --->
                   <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Modal - Image -->
@@ -554,9 +555,9 @@ SUS COMPAÑÍAS (SIN SABER LO QUE HOY SON)</h2>
                 <!-- Icon Divider -->
                 <div class="divider-custom">
                   <div class="divider-custom-line"></div>
-                  <div class="divider-custom-icon">
+                  <!---<div class="divider-custom-icon">
                     <i class="fas fa-star"></i>
-                  </div>
+                  </div> --->
                   <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Modal - Image -->
@@ -596,9 +597,9 @@ SUS COMPAÑÍAS (SIN SABER LO QUE HOY SON)</h2>
                 <!-- Icon Divider -->
                 <div class="divider-custom">
                   <div class="divider-custom-line"></div>
-                  <div class="divider-custom-icon">
+                  <!---<div class="divider-custom-icon">
                     <i class="fas fa-star"></i>
-                  </div>
+                  </div> --->
                   <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Modal - Image -->
@@ -636,9 +637,9 @@ SUS COMPAÑÍAS (SIN SABER LO QUE HOY SON)</h2>
                 <!-- Icon Divider -->
                 <div class="divider-custom">
                   <div class="divider-custom-line"></div>
-                  <div class="divider-custom-icon">
+                  <!--- <div class="divider-custom-icon">
                     <i class="fas fa-star"></i>
-                  </div>
+                  </div> --->
                   <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Modal - Image -->

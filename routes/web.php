@@ -40,8 +40,9 @@ Route::get('/distribuidor', 'DistribuidorController@index');
 
 //otra forma de simplificar aun mas las rutas
 // Route::get('/registro_socio', 'RegistroSocioController@index');
-Route::get('/registro_socio/create', 'RegistroSocioController@create');
-Route::get('/registro_socio/botones_accion', 'RegistroSocioController@destroy');
+
+// Route::get('/registro_socio/create', 'RegistroSocioController@create');
+// Route::get('/registro_socio/botones_accion', 'RegistroSocioController@destroy');
 
 //creamos todas las rutas para acceder al controlador por todos sus metodos
 Route::resource('registro_socio','RegistroSocioController');

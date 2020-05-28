@@ -10,7 +10,7 @@
           {!! $errors ->first('USUARIO_Q','<div class="invalid-feedback">:message</div>') !!}
       </div>                                                                         <!--     IF ternario, donde pongo el valor de USUARIO_NOMBRE unicamente si USUARIO_NOMBRE esta lleno, de lo contrario, imprimimos vacio--->
   </div>
-
+ 
     <div class="col-3"> 
         <div class="form-group">
             <label for="USUARIO_NOMBRE" class="control-label mb-1">{{'Nombre'}}</label>

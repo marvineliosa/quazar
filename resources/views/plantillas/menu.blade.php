@@ -53,7 +53,7 @@
              height: 105px;
         }
 
-
+</style>
         <!-- <script src="https://code.jquery.com/jquery-3.3.1.js"></script> -->
         <!-- <script src="{{asset('jquery-3.4.1.js')}}"></script> -->
         <link rel="apple-touch-icon" href="https://i.imgur.com/QRAUqs9.png">

@@ -15,9 +15,6 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <!-- cabeceras de bootstrap4  DA ERROR EN LA DELECCION ENTRADAS DE DATATABLES -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
-
     <!-- cabeceras para los DataTables -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
@@ -43,8 +40,6 @@
             alert("has hecho click  en el boton");
           }
         </script>
-
-
 
 
         <!-- estilos para datatables -->
@@ -82,14 +77,11 @@
 
 
       </style>
-
-
-
-
-
+      
   </head>
   <body>
-    <div class="container">
+    
+  <div class="container">
       <input type="button" name=""  value="ejecutar" onClick="idaleatorio()">
       <a href="{{url('registro_socio/create')}}" class="btn btn-success">Agregar Socio Quasar</a>
 
@@ -358,21 +350,8 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <input type="button" name=""  value="ejecutar" onClick="idaleatorio()">
+      <a href="{{url('registro_socio/create')}}" class="btn btn-success">Agregar Socio Quasar</a>
 
     <!-- empieza modal DE POLITICAS DE PRIVACIDAD-->
     <div class="container">
@@ -385,10 +364,10 @@
             <div class="modal-dialog modal-lg" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h1>Politicas de Seguridad Quasar</h1>
+                  <h1>Politicas de Privacidad Quasar</h1>
                 </div>
                 <div class="modal-body">
-                  cual es tu nobre?
+                  Acepta los terminos y condiciones?
                   <input class="form-control" value="">
                 </div>
                 <div class="modal-footer">
@@ -458,49 +437,23 @@
                           <th>Acciones</th>
                         </tr>
                       </thead>
-                      <!-- <tbody>
-                        @foreach ($registro_socio as $usuario)
+                       <!--- <tbody>
+                        {{-- @foreach ($registro_socio as $usuario) --}}
                         <tr class="table-primary">
-                          <td>{{$loop->iteration}}</td>
-                          <td>{{$usuario->USUARIO_NOMBRE}} {{$usuario->USUARIO_APELLIDOPATERNO}} {{$usuario->USUARIO_APELLIDOMATERNO}}</td>
-                          <td>{{$usuario->USUARIO_SEXO}}</td>
-                          <td>{{$usuario->USUARIO_CORREO}}</td>
-                          <td>{{$usuario->USUARIO_CALLE}}</td>
-                          <td>{{$usuario->USUARIO_NUM_EXT}}</td>
-                          <td>{{$usuario->USUARIO_NUM_INT}}</td>
-                          <td>{{$usuario->USUARIO_CP}}</td>
-                          <td>{{$usuario->USUARIO_COLONIA}}</td>
-                          <td>{{$usuario->USUARIO_LOCALIDAD}}</td>
-                          <td>{{$usuario->USUARIO_ENTIDAD}}</td>
-                          <td>{{$usuario->USUARIO_TEL_CASA}}</td>
-                          <td>{{$usuario->USUARIO_TEL_CEL}}</td>
-                          <td>{{$usuario->USUARIO_CURP}}</td>
-                          <td>{{$usuario->USUARIO_FECHA_NAC}}</td>
-                          <td>{{$usuario->USUARIO_ENTIDAD_NAC}}</td>
-                          <td>{{$usuario->USUARIO_ESTADO_CIVIL}}</td>
-                          <td>{{$usuario->USUARIO_BANCO}}</td>
-                          <td>{{$usuario->USUARIO_CLAVE_INTERBANCARIA}}</td>
-                          <td>{{$usuario->USUARIO_ID_PATROCINADOR}}</td>
-                          <td>{{$usuario->USUARIO_ID_UPLINE_DIRECTO}}</td>
-                          <td>{{$usuario->USUARIO_BENEFICIARIO}}</td>
-
                           <td>
-                            <a class="btn btn-warning" href="{{ url('/registro_socio/'.$usuario->id.'/edit')}}">
-                                  Editar
-                              </a>
-                                |
+
                             CON ESTA LINEA DE CODIGO SI BORRO EL REGISTRO SELECCIONADO
-                              <form method="post" style="display:inline" action="{{ url('/registro_socio', ['usuario' => $usuario->id]) }}" >
-                              {{csrf_field()}}
-                              {{ method_field('DELETE') }}
+                              {{-- <form method="post" style="display:inline" action="{{ url('/registro_socio', ['usuario' => $usuario->id]) }}" > --}}
+                              {{-- {{csrf_field()}} --}}
+                              {{-- {{ method_field('DELETE') }} --}}
                               <button class="btn btn-danger" type="submit" onclick="return confirm('¿Borrar?');" name="button">Borrar</button>
 
                               </form>
 
                           </td>
                         </tr>
-                        @endforeach
-                  </tbody> -->
+                        {{-- @endforeach --}}
+                  </tbody>  --->
                 </table>
               </div>
             </div>
@@ -527,9 +480,6 @@
 </html>
 
 
-<!-- librerias de jquery nuevas-->
-<!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
-
 <!-- este es el mismo que de arriba -->
 <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -549,10 +499,11 @@
       setTimeout(function(){
           $("#myModal").modal('show');
 
-//esta otra funcion es para que se quite el modal despues de 3S
-        //   setTimeout(function(){
-        //     $("#myModal").modal('hide');
-        // },3000);
+// esta otra funcion es para que se quite el modal despues de 3S
+          setTimeout(function(){
+            $("#myModal").modal('hide');
+        },2000);
+// aqui termina esta otra funcion es para que se quite el modal despues de 3S
       },2000);
   });
 </script>
