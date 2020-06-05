@@ -136,6 +136,7 @@
         <div id="right-panel" class="right-panel">
             <!-- Header-->
             <header id="header" class="header" style="background-color: #E6FF21;">
+                    <!--- LOGO -->
                 <div class="top-left">
                     <div class="navbar-header" style="background-color: #E6FF21;">
                         <!-- <a class="navbar-brand" href="./"><img src="images/logo3.png" alt="Logo"></a> -->
@@ -144,6 +145,10 @@
                         <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
                     </div>
                 </div>
+                
+                {{-- aqui va el logueo del usuario --}}
+                {{-- @extends('layouts.app') --}}
+
                 <div class="top-right">
                     <div class="header-menu">
                         <div class="header-left">

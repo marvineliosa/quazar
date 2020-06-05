@@ -32,19 +32,47 @@
         Menu
         <i class="fas fa-bars"></i>
       </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Portafolio</a>
-          </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Nosotros</a>
-          </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contáctanos</a>
-          </li>
-        </ul>
-      </div>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Portafolio</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Nosotros</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contáctanos</a>
+            </li>
+          </ul>
+        </div>
+
+        <!--- para que quede todo junto en el navbar  
+        <div class="flex-center position-ref full-height">  --->
+
+        <div  class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+
+            {{-- <div> --}}
+              @if (Route::has('login'))
+            {{-- <div class="top-right links"> --}}
+                @auth
+                    <a  href="{{ url('/home') }}">Home</a>
+                @else
+                  <li id="login" class="nav-item mx-0 mx-lg-1">
+                      <a class="nav-link py-3 px-0 px-lg-3  js-scroll-trigger" href="{{ route('login') }}">Login</a>
+                  </li>
+                    @if (Route::has('register'))
+                  <li id="registro" class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3  js-scroll-trigger" href="{{ route('register') }}">Registro</a>
+                  </li>
+                    @endif
+                @endauth
+            {{-- </div> --}}
+            @endif
+            {{-- </div> --}}
+          </ul>
+        </div>
+      
     </div>
   </nav>
 

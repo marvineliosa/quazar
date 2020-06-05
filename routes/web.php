@@ -10,19 +10,34 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+
+////////////Rutas para autenticacion de usuario////////////
+// Auth::routes();
+Auth::routes(['verify' => true]);
+
+// Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
+//Agrupamos las rutas que queremos que sean verificadas por email en el login
+Route::group(['middleware' => 'verified'], function (){
+    Route::get('/home', 'HomeController@index')->name('home');
+    Route::resource('registro_socio','RegistroSocioController');
+
+});
 
 //ruta de pagina de inicio
 Route::get('/', function () {
     return view('pagina_inicio');
 });
+
+
 // ruta de prueba laravel
 Route::get('/prueba', function () {
     return view('prueba');
 });
 ///////////////////////////////////////////////////////////////////
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
 //para vista de Distribuidor
 Route::get('/distribuidor', 'DistribuidorController@index');
@@ -45,7 +60,7 @@ Route::get('/distribuidor', 'DistribuidorController@index');
 // Route::get('/registro_socio/botones_accion', 'RegistroSocioController@destroy');
 
 //creamos todas las rutas para acceder al controlador por todos sus metodos
-Route::resource('registro_socio','RegistroSocioController');
+// Route::resource('registro_socio','RegistroSocioController');
 
 
 ////////////////////////////////////////////////////////
@@ -91,3 +106,7 @@ Route::get('/linea', function () {
     return view('/arboles/linea');
 });
 ////////////////////////////////////////////////////////
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
