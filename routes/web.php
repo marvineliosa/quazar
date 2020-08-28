@@ -18,32 +18,28 @@
 ////////////Rutas para autenticacion de usuario////////////
 // Auth::routes();
 Auth::routes(['verify' => true]);
-
-// Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
+// Route::get('/home', 'HomeController@index')->name('home')->middleware('verified'); para verificar solo una ruta
 //Agrupamos las rutas que queremos que sean verificadas por email en el login
 Route::group(['middleware' => 'verified'], function (){
     Route::get('/home', 'HomeController@index')->name('home');
-    Route::resource('registro_socio','RegistroSocioController');
+    Route::resource('registro_socio','RegistroSocioController'); // nos verifica el login para todo el mcr de registro_socio 
 
 });
 
-//ruta de pagina de inicio
+
+////////////Ruta de pagina de inicio////////////
 Route::get('/', function () {
     return view('pagina_inicio');
 });
 
 
-// ruta de prueba laravel
+////////////Ruta de prueba laravel////////////
 Route::get('/prueba', function () {
     return view('prueba');
 });
-///////////////////////////////////////////////////////////////////
-
-//para vista de Distribuidor
-Route::get('/distribuidor', 'DistribuidorController@index');
 
 
-//RUTAS DE AXEL (SI ESTAN BIEN :V)
+////////////RUTAS DE AXEL (SI ESTAN BIEN :V)////////////
 
 // Route::get('/formulario', 'RegistroSocioController@index');
 
@@ -61,6 +57,9 @@ Route::get('/distribuidor', 'DistribuidorController@index');
 
 //creamos todas las rutas para acceder al controlador por todos sus metodos
 // Route::resource('registro_socio','RegistroSocioController');
+
+
+
 
 
 ////////////////////////////////////////////////////////
@@ -81,20 +80,16 @@ Route::get('/pedidos2', function () {
 
 ////////////////////////////////////////////////////////
 //rutas de gera
-Route::get('/lineas', function () {
-    return view('arboles/arboles1');
-});
+//GENERACIONAL
 Route::get('/arbol', function () {
     return view('/arboles/arbol');
 });
+
 Route::get('/arbol2', function () {
     return view('/arboles/arbol2');
 });
 Route::get('/arbol3', function () {
     return view('/arboles/arbol3');
-});
-Route::get('/arbol4', function () {
-    return view('/arboles/arbol4');
 });
 Route::get('/arboles1', function () {
     return view('/arboles/arboles1');
@@ -106,7 +101,3 @@ Route::get('/linea', function () {
     return view('/arboles/linea');
 });
 ////////////////////////////////////////////////////////
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

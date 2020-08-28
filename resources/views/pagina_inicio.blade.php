@@ -8,10 +8,12 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Freelancer - Start Bootstrap Theme</title>
+  <title>Quasar</title>
+  
+  <link rel="icon" href="images/nuevos logos/Q-1.ico">
 
   <!-- Custom fonts for this theme -->
-  <!-- <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"> -->
+   {{-- <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">  --}}
   <link href="{{asset('public_inicio/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
@@ -27,11 +29,15 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">Quasar</a>
+      <a class="navbar-brand js-scroll-trigger"  href="#page-top">
+        <img src="{{asset('img/pagina_inicio/logo blanco PNG Ch.png')}}" width="260px" height="110px">
+      </a>
+      {{-- <a class="navbar-brand js-scroll-trigger" href="#page-top">Quasar</a> --}}
       <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
       </button>
+
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item mx-0 mx-lg-1">
@@ -43,35 +49,53 @@
             <li class="nav-item mx-0 mx-lg-1">
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contáctanos</a>
             </li>
-          </ul>
-        </div>
+          
 
-        <!--- para que quede todo junto en el navbar  
-        <div class="flex-center position-ref full-height">  --->
+         {{-- para que quede todo junto en el navbar   --}}
+        {{-- <div class="flex-center position-ref full-height">   --}}
 
-        <div  class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-
+          {{-- Parte de la vista login --}}
             {{-- <div> --}}
               @if (Route::has('login'))
             {{-- <div class="top-right links"> --}}
                 @auth
-                    <a  href="{{ url('/home') }}">Home</a>
+                <li id="home" class="nav-item mx-0 mx-lg-1"> 
+
+                    <a class="nav-link py-3 px-0 px-lg-3" href="{{ url('/home') }}">Mi Backoffice</a>
+                  </li>
+
                 @else
-                  <li id="login" class="nav-item mx-0 mx-lg-1">
-                      <a class="nav-link py-3 px-0 px-lg-3  js-scroll-trigger" href="{{ route('login') }}">Login</a>
+                  <li id="login" class="nav-item mx-0 mx-lg-1"> 
+
+                      @extends('Modales/inicio_sesion_socio')
+                      @section('inicio_sesion')  
+                      @endsection
+                      {{-- <a class="nav-link py-3 px-0 px-lg-3  js-scroll-trigger" href="{{ route('login') }}">Iniciar Sesion</a> --}}
+                      <a class="nav-link py-3 px-0 px-lg-3" href="#bannerformmodal" data-toggle="modal" data-target="#bannerformmodal">Iniciar Sesion</a>
+
+
                   </li>
                     @if (Route::has('register'))
                   <li id="registro" class="nav-item mx-0 mx-lg-1">
-                    <a class="nav-link py-3 px-0 px-lg-3  js-scroll-trigger" href="{{ route('register') }}">Registro</a>
+                   
+                   
+                     @extends('Modales/registro_socio')
+                      @section('registro')  
+                      @endsection
+                      {{-- <button type="button">Registro</button> --}}
+                      <a class="nav-link py-3 px-0 px-lg-3"  data-toggle="modal" onclick="mostrarModal()" >Registro</a>
+
+    
+                    
                   </li>
                     @endif
                 @endauth
             {{-- </div> --}}
             @endif
             {{-- </div> --}}
-          </ul>
-        </div>
+        </ul>
+      </div>
+        {{-- </div> --}}
       
     </div>
   </nav>
@@ -110,9 +134,10 @@
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
                 <i class="fas fa-plus fa-3x"></i>
+                <h5>¿BUSCAS UNA OPORTUNIDAD? Clic Aqui</h5>
               </div>
             </div>
-            <img class="img-fluid" src="{{asset('img/pagina_inicio/2.jpg')}}" alt="">
+            <img class="img-fluid" src="{{asset('img/pagina_inicio/Dinero.jpeg')}}" alt="">
           </div>
         </div>
 
@@ -122,9 +147,10 @@
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
                 <i class="fas fa-plus fa-3x"></i>
+                <h5>¿QUIÉNES SOMOS?</h5>
               </div>
             </div>
-            <img class="img-fluid" src="{{asset('img/pagina_inicio/3.jpg')}}" alt="">
+            <img class="img-fluid" src="{{asset('img/pagina_inicio/Lider.jpeg')}}" alt="">
           </div>
         </div>
 
@@ -136,7 +162,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="{{asset('img/pagina_inicio/4.jpg')}}" alt="">
+            <img class="img-fluid" src="{{asset('img/pagina_inicio/QH.jpeg')}}" alt="">
           </div>
         </div>
 
@@ -146,9 +172,10 @@
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
                 <i class="fas fa-plus fa-3x"></i>
+                <h5>PLAN DE COMPENSACIÓN</h5>
               </div>
             </div>
-            <img class="img-fluid" src="{{asset('img/pagina_inicio/5.jpg')}}" alt="">
+            <img class="img-fluid" src="{{asset('img/pagina_inicio/Red.jpeg')}}" alt="">
           </div>
         </div>
 
@@ -160,7 +187,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="{{asset('img/pagina_inicio/5.jpg')}}" alt="">
+            <img class="img-fluid" src="{{asset('img/pagina_inicio/Engranes.jpeg')}}" alt="">
           </div>
         </div>
 
@@ -172,7 +199,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="{{asset('img/pagina_inicio/7.jpg')}}" alt="">
+            <img class="img-fluid" src="{{asset('img/pagina_inicio/Diamante.jpeg')}}" alt="">
           </div>
         </div>
 
@@ -229,10 +256,10 @@
       <!-- About Section Content -->
       <div class="row">
         <div class="col-lg-4 ml-auto">
-          <p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p>
+          <p class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime incidunt officia cumque reprehenderit, tempora quis sit sint laborum! Reprehenderit repudiandae a aliquid praesentium molestias aperiam, hic minus nulla aliquam sed!.</p>
         </div>
         <div class="col-lg-4 mr-auto">
-          <p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p>
+          <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quae enim odit sequi. Repellendus, quod eum? Quidem suscipit illo quibusdam magnam, dolor quod exercitationem in architecto. Porro similique soluta asperiores.</p>
         </div>
       </div>
 
@@ -322,8 +349,8 @@
 
         <!-- Footer Social Icons -->
         <div class="col-lg-4 mb-5 mb-lg-0">
-          <h4 class="text-uppercase mb-4">Around the Web</h4>
-          <a class="btn btn-outline-light btn-social mx-1" href="#">
+          <h4 class="text-uppercase mb-4">Siguenos en / Conocenos mejor en</h4>
+          <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/Quasar-Abundancia-y-Bienestar-oficial-103419347889292/">
             <i class="fab fa-fw fa-facebook-f"></i>
           </a>
           <a class="btn btn-outline-light btn-social mx-1" href="#">
@@ -339,7 +366,7 @@
 
         <!-- Footer About Text -->
         <div class="col-lg-4">
-          <h4 class="text-uppercase mb-4">About Freelancer</h4>
+          <h4 class="text-uppercase mb-4">Sobre Quasar</h4>
           <p class="lead mb-0">Freelance is a free to use, MIT licensed Bootstrap theme created by
             <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
         </div>
@@ -377,12 +404,8 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-lg-8">
-                <!-- Portfolio Modal - Title -->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">VIVIENDO UN
-ESTILO DE VIDA
-CON
-ABUNDANCIA Y
-BIENESTAR.</h2>
+  <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">VIVIENDO UN ESTILO DE VIDA CON ABUNDANCIA Y BIENESTAR.</h2>
                 <!-- Icon Divider -->
                 <div class="divider-custom">
                   <div class="divider-custom-line"></div>
@@ -392,9 +415,15 @@ BIENESTAR.</h2>
                   <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Modal - Image -->
-                <img class="img-fluid rounded mb-5" src="{{asset('img/pagina_inicio/2.jpg')}}" alt="">
+                <img class="img-fluid rounded mb-5" src="{{asset('img/pagina_inicio/Dinero.jpeg')}}" alt="">
                 <!-- Portfolio Modal - Text -->
-                <p class="mb-5">Una de las mayores proezas de un hombre en la vida, es tener un negocio que le produzca dinero.</p>
+                <p class="mb-5">
+                  
+                    Sabías qué... Hoy en día tener una segunda fuente de ingresos no es un lujo sino una
+                    necesidad. ¿Verdad?
+                    En QUASAR somos ese trampolín financiero que ayudará a ti y a tu familia a vivir un estilo
+                    de vida con ABUNDANCIA Y BIENESTAR.</p>
+                  
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
                   Cerrar
@@ -431,9 +460,20 @@ BIENESTAR.</h2>
                   <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Modal - Image -->
-                <img class="img-fluid rounded mb-5" src="{{asset('img/pagina_inicio/3.jpg')}}" alt="">
+                <img class="img-fluid rounded mb-5" src="{{asset('img/pagina_inicio/Lider.jpeg')}}" alt="">
                 <!-- Portfolio Modal - Text -->
-                <p class="mb-5">Hoy en día los negocios millonarios son a través del network marketing denominándose por su gran crecimiento espectacular…</p>
+                <p class="mb-10">
+                  
+                    Somos una empresa de la nueva era de los negocios Multinivel, hecha por networkers para networkers.
+                    Creemos firmemente que para brindarte una gran oportunidad inigualable debemos
+                    desarrollar 3 pilares para garantizar el bienestar tuyo y el de tu familia:
+                  
+                  </p>
+                    
+                        <li class="text-align:center">Plan de compensacion</li>
+                        <li class="text-align:center">Producto</li>
+                        <li class="text-align:center">Sistema</li>
+
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
                   Cerrar
@@ -460,8 +500,7 @@ BIENESTAR.</h2>
             <div class="row justify-content-center">
               <div class="col-lg-8">
                 <!-- Portfolio Modal - Title -->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">SI TE HUBIERAN INVITADO A INICIAR CON ELLOS
-SUS COMPAÑÍAS (SIN SABER LO QUE HOY SON)</h2>
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">SI TE HUBIERAN INVITADO A INICIAR CON ELLOS SUS COMPAÑÍAS (SIN SABER LO QUE HOY SON)</h2>
                 <!-- Icon Divider -->
                 <div class="divider-custom">
                   <div class="divider-custom-line"></div>
@@ -472,9 +511,15 @@ SUS COMPAÑÍAS (SIN SABER LO QUE HOY SON)</h2>
                 </div>
                 <!-- Portfolio Modal - Image -->
                 <!-- <img class="img-fluid rounded mb-5" src="img/4.jpg" alt=""> -->
-                <img class="img-fluid rounded mb-5" src="{{asset('img/pagina_inicio/4.jpg')}}" alt="">
+                <img class="img-fluid rounded mb-5" src="{{asset('img/pagina_inicio/QH.jpeg')}}" alt="">
+                <img class="img-fluid rounded mb-5" src="{{asset('img/pagina_inicio/QM.jpeg')}}" alt="">
+
                 <!-- Portfolio Modal - Text -->
-                <p class="mb-5">¿HUBIERAS ACEPTADO?</p>
+                <p class="mb-5">
+                  
+                    ¿HUBIERAS ACEPTADO?
+                  
+                </p>
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
                   Cerrar
@@ -511,9 +556,27 @@ SUS COMPAÑÍAS (SIN SABER LO QUE HOY SON)</h2>
                   <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Modal - Image -->
-                <img class="img-fluid rounded mb-5" src="{{asset('img/pagina_inicio/5.jpg')}}" alt="">
+                <img class="img-fluid rounded mb-5" src="{{asset('img/pagina_inicio/Red.jpeg')}}" alt="">
                 <!-- Portfolio Modal - Text -->
-                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                <p class="mb-5">
+                  Desarrollamos un plan el cual se adapta a los 3 fundamentos que hacen que un plan sea <br>
+                 <strong>sólido, rentable y con gran potencial de crecimiento.</strong>
+                    <table style="width:100%" class="text-justify">
+                      <tr>
+                        <td><li><strong>Explosividad: </strong>Con QUASAR recuperas tu inversión desde tus primeros 2 patrocinios.</li></td> 
+                      </tr>
+                      <tr>
+                        <td><li><strong>Profundidad: </strong>Te damos la oportunidad de cobrar de todas las personas que tengas en tu organización, generando apalancamiento, derrama y trabajo en equipo.</li></td>
+                      </tr>
+                      <tr>
+                        <td><li><strong>Frontalidad: </strong>En QUASAR también tienes la oportunidad de patrocinar a todos los frontales que quieras y con esto generar cheques más grandes al mismo tiempo que apalancas a tu equipo.</li></td>
+                      </tr>
+                    </table>
+                    <br>
+                  <strong>
+                    ¡Contacta a la persona que te invitó!
+                  </strong>
+                </p>
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
                   Cerrar
@@ -550,9 +613,21 @@ SUS COMPAÑÍAS (SIN SABER LO QUE HOY SON)</h2>
                   <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Modal - Image -->
-                <img class="img-fluid rounded mb-5" src="{{asset('img/pagina_inicio/5.jpg')}}" alt="">
+                <img class="img-fluid rounded mb-5" src="{{asset('img/pagina_inicio/Engranes.jpeg')}}" alt="">
                 <!-- Portfolio Modal - Text -->
-                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                <p class="mb-0">Nuestro sistema se fundamenta en el <strong> SER, HACER Y TENER </strong> ayudándote a convertirte en
+                  un gran líder a través de la capacitación, el entrenamiento y la motivación en 2 mercados de desarrollo:
+                </p>
+                <p class="mb=0">
+                  <li class="text-align:justify"><strong>Mercado Caliente</strong></li>
+                  <li class="text-align:justify"><strong>Mercado Frio</strong></li>
+                </p>
+                <p class="mb=">
+                  En los cuales te enseñamos a utilizar sistemas de prospección, presentación, cierre y
+                  duplicación masivos, apalancado de las redes sociales.
+                </p>
+                <br>
+
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
                   Cerrar
@@ -589,12 +664,13 @@ SUS COMPAÑÍAS (SIN SABER LO QUE HOY SON)</h2>
                   <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Modal - Image -->
-                <img class="img-fluid rounded mb-5" src="{{asset('img/pagina_inicio/7.jpg')}}" alt="">
+                <img class="img-fluid rounded mb-5" src="{{asset('img/pagina_inicio/Diamante.jpeg')}}" alt="">
                 <!-- Portfolio Modal - Text -->
-                <p class="mb-5">Gana $1,100 pesos por cada persona que ingreses y califique.
-                  ¡Imagínate! En tu primera semana podrías ganar más de lo que ganas actualmente.
+                <p class="mb-5"> <strong>¡El momento es ahora!</strong>
+                  <br>
+                  Contacta a la persona que te invitó para que te brinde más información sobre ésta gran
+                  oportunidad.
                 </p>
-                <p class="mb-5">Sólo tienes 2 posiciones. Las personas que se firmen después de las primeras 2 serán derramadas para generar volumen en equipo y apalancarse entre todos, pero tú cobrarás el bono rápido de todos tus patrocinados.</p>
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
                   Cerrar
@@ -714,6 +790,11 @@ SUS COMPAÑÍAS (SIN SABER LO QUE HOY SON)</h2>
 
 <script type="text/javascript">
 
-  $("#contacto_nombre").val('algo');
+// para pasarle  un nombre ficticio
+  // $("#contacto_nombre").val('algo');
+
+
+
+ 
 
 </script>

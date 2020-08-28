@@ -1,17 +1,11 @@
+
 @extends('plantillas.menu')
 @section('content')
 
-    <div class="col-lg-12 col-md-12">
-        <div class="card">
-            <div class="card-body">
 
-
-
-            </div>
-        </div>
-    </div>
-
+<h3>esto es una prueba :v</h3>
 @endsection
+
 @section('script')
 
   <script>
@@ -21,3 +15,5 @@
   </script>
 
 @endsection
+
+

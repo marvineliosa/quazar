@@ -3,11 +3,24 @@
 @extends('plantillas.menu')
 @section('content')
 
-
+<!--- mensaje para Agregar y Eliminar registro de socio quasar --->
  @if(Session::has('Mensaje'))
-  <div class="alert alert-success" role="alert">
-      {{	Session::get('Mensaje')}}
-  </div>
+<div class="alert alert-success" role="alert">
+    {{	Session::get('Mensaje')}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+@endif
+
+<!--- mensaje para Modificar registro de socio quasar --->
+@if(Session::has('Mensaje-Modificar'))
+<div class="sufee-alert alert with-close alert-warning alert-dismissible fade show">
+  {{	Session::get('Mensaje-Modificar')}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+  </button>
+</div>
 @endif
 
 
@@ -17,9 +30,22 @@
     <meta charset="utf-8">
     <!-- cabeceras para los DataTables -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+
+    <!-- este es el mismo que de arriba -->
+    {{-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  --}}
+
+    <!-- librerias para DataTables -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+
+   
 
     <title>Menu</title>
+
         <script>
           // function idaleatorio(min,max){
           //   min=Math.ceil(min);
@@ -49,11 +75,18 @@
 
           background-color: #004472;
           color: blue;
-
           font: #EEEEEE;
           color: white;
           font-weight: bold;
+          text-align: center;
+      }
 
+      .boton_agregar{
+        float: right;
+      }
+
+      .socios_registrados{
+        float: left;
       }
 
       .card-header {
@@ -65,66 +98,20 @@
          color: black;
       }
 
-      /* para titulos de los modales */
-      .modal-header {
-        padding: .75rem 1.25rem;
-         margin-bottom: 0;
-         background-color: rgb(239,232,81);
-         border-bottom: 1px solid rgba(0,0,0,.8);
-         font: #000000;
-         color: black;
-      }
 
       </style>
     </head>
   <body>
   
 
-
-  <input type="button" name=""  value="ejecutar" onClick="idaleatorio()">
-      <a href="{{url('registro_socio/create')}}" class="btn btn-success">Agregar Socio Quasar</a>
-
-    <!-- empieza modal DE POLITICAS DE PRIVACIDAD-->
-    <div class="container">
-      <div class="row">
-        <div class="col-ls-12">
-
-          <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button> -->
-
-          <div class="modal fade bd-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1>Politicas de Privacidad Quasar</h1>
-                </div>
-                <div class="modal-body">
-                  Acepta los terminos y condiciones?
-                  <input class="form-control" value="">
-                </div>
-                <div class="modal-footer">
-                  <input class="btn btn-primary" data-dismiss="modal" value="Cerrar">
-
-                </div>
-              </div>
-            </div>
-          </div>
-        <!-- <a href="#" data-toggle="modal" data-target="#myModal">Abrir Modal</a> -->
-      </div>
+    <div>
+      {{-- <input type="button" name=""  value="ejecutar" onClick="idaleatorio()"> --}}
     </div>
-  </div>
-  <!-- aqui termina modal DE POLITICAS DE PRIVACIDAD -->
 
-
-
-
-
-
-
-
-
-
-
-
+{{-- @extends('Modales/bienvenida_socio')
+@section('bienvenida')
+    
+@endsection --}}
 
     <div class="content">
       <div class="animated fadeIn">
@@ -132,19 +119,32 @@
           <div class="col-md-12">
             <div class="card border-info mb-3">
                 <div class="card-header ">
-                    <strong class="card-title">Socios Registrados</strong>
+                    <div class="socios_registrados">
+                      <strong class="card-title">Socios Registrados</strong>   
+                    </div>
+                    
+
+
+                    
+                    
+                    <div class="boton_agregar">
+                      <a href="{{url('registro_socio/create')}}" class="btn btn-success">
+                        <i class="fa fa-plus fa-md"></i>&nbsp;
+                        <span id="payment-button-amount">Agregar Socio Quasar</span>
+                      </a>
+                    </div>
+
                 </div>
                 <div class="card-body">
                   <!-- id=tabla_datos -->
                     <table id="registro_socios" class="table table-striped table-bordered table-hover">
                       <thead class="thead-blue" >
-
                         <tr>
-                          <th>#</th>
-                          <th>Q</th>
+                          <th width="10px">Socio</th>
                           <th>Nombre</th>
-                          <th>Apellido Paterno</th>
-                          <th>Apellido Materno</th>
+
+                          {{-- <th style="text-align:center;"><strong>Q</strong></th> --}}
+
                           <th>Sexo</th>
                           <th>Correo Electronico</th>
                           <th>Calle</th>
@@ -165,7 +165,7 @@
                           <th>ID de Patrocinador</th>
                           <th>ID de Upline Directo</th>
                           <th>Beneficiario</th>
-                          <th>Acciones</th>
+                          <th width="60px">Acciones</th>
                         </tr>
                       </thead>
                        <!--- <tbody>
@@ -193,52 +193,8 @@
       </div>
     </div>
   </body>
-
-
-
-        <!-- <footer class="site-footer">
-            <div class="footer-inner bg-white">
-                <div class="row">
-                    <div class="col-sm-12">
-                        Copyright &copy; 2018 Ela Admin
-                    </div>
-                    <div class="col-sm-12 text-right">
-                        Designed by <a href="https://colorlib.com">Colorlib</a>
-                    </div>
-                </div>
-            </div>
-        </footer> -->
 </html>
-
-
-<!-- este es el mismo que de arriba -->
-<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
-
-
-
-
-<!-- librerias para DataTables -->
-<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
-
-<!-- script para modal timing -->
-<script type="text/javascript">
-  $(document).ready(function(){
-      setTimeout(function(){
-          $("#myModal").modal('show');
-
-// esta otra funcion es para que se quite el modal despues de 3S
-          setTimeout(function(){
-            $("#myModal").modal('hide');
-        },2000);
-// aqui termina esta otra funcion es para que se quite el modal despues de 3S
-      },2000);
-  });
-</script>
-
+{{-- script que procesa la data con ajax --}}
 	<script>
 		$(document).ready(function() {
 			  $('#registro_socios').DataTable({
@@ -246,11 +202,20 @@
         "serverSide":true,
         "ajax":"{{ url('api/registro_socios') }}",
         "columns":[
-          {data:'id'},
-          {data:'USUARIO_Q'},
-          {data:'USUARIO_NOMBRE'},
-          {data:'USUARIO_APELLIDOPATERNO'},
-          {data:'USUARIO_APELLIDOMATERNO'},
+
+
+          {"render":
+            function ( data, type, row ) {
+                return ('<strong>Q</strong>' + row['id'] );
+              }
+          },
+          
+
+          {"render":
+            function ( data, type, row ) {
+                return (row['USUARIO_NOMBRE'] + ' ' + row['USUARIO_APELLIDOPATERNO'] + ' ' + row['USUARIO_APELLIDOMATERNO'] + ' ' );
+              }
+          },
           {data:'USUARIO_SEXO'},
           {data:'USUARIO_CORREO'},
           {data:'USUARIO_CALLE'},
@@ -273,7 +238,33 @@
           {data:'USUARIO_BENEFICIARIO'},
           {data:'btn'}
 
-        ]
+        ],
+        "language": {
+          'url' : '//cdn.datatables.net/plug-ins/1.10.19/i18n/Spanish.json'
+        }
+        // o para mas personalizacion....
+        // "language": {
+        //   "info": "_TOTAL_ Registros",
+        //   "search": "Buscar",
+        //   "paginate": {
+        //      "next": "Siguiente",
+        //       "previous": "Anterior"
+        //   },
+        //   "lengthMenu": 'Mostrar <select>'+
+        //               '<option value ="10">10</option>'+
+        //               '<option value ="25">25</option>'+
+        //               '<option value ="50">50</option>'+
+        //               '<option value ="100">100</option>'+
+        //               '<option value ="-1">Todos</option>'+
+        //               '</select> Registros',
+        //   "LoadingRecords": "Cargando...",
+        //   "processing": "Procesando",
+        //   "emptyTable": "No se encontraron registros",
+        //   "zeroRecords": "No hay coincidencias",
+        //   "infoEmpty": "Mostrando 0 de",
+        //   "infoFiltered": "0 Registros"
+        // }
+
       });
 		});
 	</script>
@@ -288,3 +279,5 @@
     </script>
 
   @endsection
+
+

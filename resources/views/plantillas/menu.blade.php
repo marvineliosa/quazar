@@ -1,63 +1,19 @@
-<html>
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ela Admin - HTML5 Admin Template</title>
+    <title>Quasar Abundancia y Bienestar</title>
     <meta name="description" content="Ela Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" href="https://i.imgur.com/QRAUqs9.png">
     <link rel="shortcut icon" href="https://i.imgur.com/QRAUqs9.png">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/css/flag-icon.min.css">
-    <link rel="stylesheet" href="assets/css/cs-skin-elastic.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
-    <link href="https://cdn.jsdelivr.net/npm/chartist@0.11.0/dist/chartist.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/jqvmap@1.5.1/dist/jqvmap.min.css" rel="stylesheet">
-
-    <link href="https://cdn.jsdelivr.net/npm/weathericons@2.1.0/css/weather-icons.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.css" rel="stylesheet" />
-
-    <!-- <script src="{{asset('jquery-3.4.1.js')}}"></script> -->
-   <style>
-    #weatherWidget .currentDesc {
-        color: #ffffff!important;
-    }
-        .traffic-chart {
-            min-height: 335px;
-        }
-        #flotPie1  {
-            height: 150px;
-        }
-        #flotPie1 td {
-            padding:3px;
-        }
-        #flotPie1 table {
-            top: 20px!important;
-            right: -10px!important;
-        }
-        .chart-container {
-            display: table;
-            min-width: 270px ;
-            text-align: left;
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
-        #flotLine5  {
-             height: 105px;
-        }
-
-</style>
-        <!-- <script src="https://code.jquery.com/jquery-3.3.1.js"></script> -->
-        <!-- <script src="{{asset('jquery-3.4.1.js')}}"></script> -->
-        <link rel="apple-touch-icon" href="https://i.imgur.com/QRAUqs9.png">
-        <link rel="shortcut icon" href="https://i.imgur.com/QRAUqs9.png">
+        
+        {{-- <link rel="icon" href="images/nuevos logos/Q-1.ico"> --}}
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
@@ -75,48 +31,8 @@
         <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.css" rel="stylesheet" />
 
         <!-- DATA TABLES -->
-        <link rel="stylesheet" href="{{asset('assets/css/lib/datatable/dataTables.bootstrap.min.css')}}">
-
-        <!-- <link href="{{asset('vendors/iCheck/skins/flat/green.css')}}" rel="stylesheet"> -->
-
-       <style>
-        #weatherWidget .currentDesc {
-            color: #ffffff!important;
-        }
-            .traffic-chart {
-                min-height: 335px;
-            }
-            #flotPie1  {
-                height: 150px;
-            }
-            #flotPie1 td {
-                padding:3px;
-            }
-            #flotPie1 table {
-                top: 20px!important;
-                right: -10px!important;
-            }
-            .chart-container {
-                display: table;
-                min-width: 270px ;
-                text-align: left;
-                padding-top: 10px;
-                padding-bottom: 10px;
-            }
-            #flotLine5  {
-                 height: 105px;
-            }
-
-            #flotBarChart {
-                height: 150px;
-            }
-            #cellPaiChart{
-                height: 160px;
-            }
-
-        </style>
-
-
+        {{-- <link rel="stylesheet" href="{{asset('assets/css/lib/datatable/dataTables.bootstrap.min.css')}}"> --}}
+        {{--  <link href="{{asset('vendors/iCheck/skins/flat/green.css')}}" rel="stylesheet"> --}}
 
     </head>
 
@@ -126,28 +42,27 @@
     RGB: R0, G68 y B114         #004472     claro
 
     Amarillo
-    CMYK: C:10, M:0, Y:87 K:0   #E6FF21     fuerte
+    CMYK: C:10, M:0, Y:87 K:0   #e6ff21     fuerte
     RGB: R:239, G:232, B:81     #EFE851     claro -->
 
     <body>
         <meta name="csrf-token" content="{{ csrf_token() }}">
         @include('plantillas.navbar')
+        <!-- /#left-panel -->
         <!-- Right Panel -->
         <div id="right-panel" class="right-panel">
             <!-- Header-->
-            <header id="header" class="header" style="background-color: #E6FF21;">
+            <header id="header" class="header"  style="background-color: #004472;">
                     <!--- LOGO -->
-                <div class="top-left">
-                    <div class="navbar-header" style="background-color: #E6FF21;">
-                        <!-- <a class="navbar-brand" href="./"><img src="images/logo3.png" alt="Logo"></a> -->
-                        <a class="navbar-brand" href="./"><img src="images/logo.png" alt="Logo" style="width: 100px; height:auto ;" align="top"></a>
-                        <!-- <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a> -->
-                        <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
+                <div class="top-left" >
+                    <div class="navbar-header" style="background-color: #004472;">
+                      <!--- agregar a la etiqueta <a> de abajp class="navbar-brand"  --->   
+                         <a  href="./"><img src="images/logo blanco PNG Ch.png" alt="Logo" width="125px" height="54px"></a> 
+                         <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a>
+                         <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
                     </div>
                 </div>
-                
-                {{-- aqui va el logueo del usuario --}}
-                {{-- @extends('layouts.app') --}}
+                 
 
                 <div class="top-right">
                     <div class="header-menu">
@@ -224,12 +139,45 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="user-area dropdown float-right">
-                            <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img class="user-avatar rounded-circle" src="images/admin.jpg" alt="User Avatar">
+{{-- empiea sesion --}}
+            <div>
+                <ul class="navbar-nav ml-auto">
+                    <!-- Authentication Links -->
+                    @guest
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        </li>
+                        @if (Route::has('register'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            </li>
+                        @endif
+                    @else
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
 
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>
+                    @endguest
+                </ul>
+            </div>
+{{-- termina sesion --}}
+                        <div class="user-area dropdown float-right">
+                                <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img class="user-avatar rounded-circle" src="images/admin.jpg" alt="User Avatar">
+                                </a>
                             <div class="user-menu dropdown-menu">
                                 <a class="nav-link" href="#"><i class="fa fa- user"></i>My Profile</a>
 
@@ -250,11 +198,11 @@
                 <!-- Animated -->
                 <div class="animated fadeIn">
                     <!-- Widgets  -->
+                   <!--- aqui debe ir todo el contenido  --->
                     <div class="row">
                       @yield('content')
                     </div>
                 <!-- /#add-category -->
-
                 </div>
                 <!-- .animated -->
             </div>
@@ -264,12 +212,12 @@
             <footer class="site-footer">
                 <div class="footer-inner bg-white">
                     <div class="row">
-                        <!-- <div class="col-sm-6">
-                            Copyright &copy; 2018 Ela Admin
+                         <div class="col-sm-12">
+                            Copyright &copy; Quasar
                         </div>
                         <div class="col-sm-6 text-right">
                             Designed by <a href="https://colorlib.com">Colorlib</a>
-                        </div> -->
+                        </div> 
                     </div>
                 </div>
             </footer>
@@ -278,20 +226,21 @@
         <!-- /#right-panel -->
 
         <!-- Scripts -->
-        <script src="{{asset('jquery-3.4.1.js')}}"></script>
-        <!-- <script src="{{asset('jquery/jquery.min.js')}}"></script> -->
-        <!-- <script src='http://code.jquery.com/jquery-2.1.3.js'></script> -->
-        <!-- <script src="{{asset('public_inicio/vendor/jquery/jquery.min.js')}}"></script> -->
-        <!-- <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> -->
-        <!-- <script src="{{asset('arboles_1/jquery.min.js')}}"></script> -->
+         {{-- <script src="{{asset('jquery-3.4.1.js')}}"></script>
+         <script src="{{asset('jquery/jquery.min.js')}}"></script>
+         <script src='http://code.jquery.com/jquery-2.1.3.js'></script>
+         <script src="{{asset('public_inicio/vendor/jquery/jquery.min.js')}}"></script>
+         <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+         <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script> --}}
 
-        <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script> -->
 
+        
         <!-- =========================================================== -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
-
+    
         <!-- Este JS causa conflictos con jquery pero corresponde al menu -->
         <script src="assets/js/main.js"></script>
 
@@ -301,74 +250,77 @@
         <!--Chartist Chart-->
         <script src="https://cdn.jsdelivr.net/npm/chartist@0.11.0/dist/chartist.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chartist-plugin-legend@0.6.2/chartist-plugin-legend.min.js"></script>
-
+    
         <script src="https://cdn.jsdelivr.net/npm/jquery.flot@0.8.3/jquery.flot.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/flot-pie@1.0.0/src/jquery.flot.pie.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/flot-spline@0.0.1/js/jquery.flot.spline.min.js"></script>
-
+    
         <script src="https://cdn.jsdelivr.net/npm/simpleweather@3.1.0/jquery.simpleWeather.min.js"></script>
+        <script src="assets/js/init/weather-init.js"></script>
+    
+        <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.js"></script>
+        <script src="assets/js/init/fullcalendar-init.js"></script>
+    
 
+    <!--send help de gera-->
+ 
 
-    <!--send help-->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.js"></script>
-    <script src="assets/js/init/fullcalendar-init.js"></script>
 
     <link href="{{asset('arboles_1/Treant.css')}}" rel="stylesheet">
     <link href="{{asset('arboles_1/collapsable.css')}}" rel="stylesheet">
     <link href="{{asset('arboles_1/perfect-scrollbar.css')}}" rel="stylesheet">
     <link href="{{asset('arboles_1/timeline.css')}}" rel="stylesheet">
 
-    <!--send help-->
-    <link href="{{asset('arboles_1/Graficas/libs/morris.css')}}" rel="stylesheet">
-    <!--<script src="{{asset('arboles_1/Graficas/libs/morris.min.js')}}" charset="utf-8"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>-->
-    <script src="{{asset('arboles_1/Graficas/libs/morris.min.js')}}" charset="utf-8"></script>
+      <!--send help de gera tambien :v-->
+      <link href="{{asset('arboles_1/Graficas/libs/morris.css')}}" rel="stylesheet">
+      <!--<script src="{{asset('arboles_1/Graficas/libs/morris.min.js')}}" charset="utf-8"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>-->
+      <script src="{{asset('arboles_1/Graficas/libs/morris.min.js')}}" charset="utf-8"></script>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <script src="{{asset('arboles_1/collapsable.js')}}"></script>
-    <script src="{{asset('arboles_1/raphael.js')}}"></script>
+      <script src="{{asset('arboles_1/collapsable.js')}}"></script>
+      <script src="{{asset('arboles_1/raphael.js')}}"></script>
+      <script src="{{asset('arboles_1/Treant.js')}}"></script>
+      <script src="{{asset('arboles_1/jquery.easing.js')}}"></script>
+      <script src="{{asset('arboles_1/jquery.min.js')}}"></script>
+      <script src="{{asset('arboles_1/timeline.js')}}"></script>
+      <script src="{{asset('arboles_1/timeline2.js')}}"></script>
+  
+
+      <script src="{{asset('arboles_1/collapsable2.js')}}"></script>
+
+      <script src="{{asset('arboles_1/collapsable3.js')}}"></script>
+  
+
+
+
+            <!-- DATA TABLES pero son incompatibles con navbar  del index -->
+            <script src="{{asset('jquery-3.4.1.js')}}"></script>
+            <script src="{{asset('assets/js/lib/data-table/datatables.min.js')}}"></script>
+            <script src="{{asset('assets/js/lib/data-table/dataTables.bootstrap.min.js')}}"></script>
+            <script src="{{asset('assets/js/lib/data-table/dataTables.buttons.min.js')}}"></script>
+            <script src="{{asset('assets/js/lib/data-table/buttons.bootstrap.min.js')}}"></script>
+            <script src="{{asset('assets/js/lib/data-table/jszip.min.js')}}"></script>
+            <script src="{{asset('assets/js/lib/data-table/vfs_fonts.js')}}"></script>
+            <script src="{{asset('assets/js/lib/data-table/buttons.html5.min.js')}}"></script>
+            <script src="{{asset('assets/js/lib/data-table/buttons.print.min.js')}}"></script>
+            <script src="{{asset('assets/js/lib/data-table/buttons.colVis.min.js')}}"></script>
+            <script src="{{asset('assets/js/init/datatables-init.js')}}"></script>
+
+            
+     <!-- <script src="{{asset('arboles_1/collapsable.js')}}"></script> -->
+    <!-- <script src="{{asset('arboles_1/raphael.js')}}"></script>
     <script src="{{asset('arboles_1/Treant.js')}}"></script>
-    <script src="{{asset('arboles_1/jquery.easing.js')}}"></script>
-    <script src="{{asset('arboles_1/jquery.min.js')}}"></script>
-    <script src="{{asset('arboles_1/timeline.js')}}"></script>
-    <script src="{{asset('arboles_1/timeline2.js')}}"></script>
+    <script src="{{asset('arboles_1/jquery.easing.js')}}"></script> -->
 
-
-
-
-    <script src="{{asset('arboles_1/collapsable2.js')}}"></script>
-
-    <script src="{{asset('arboles_1/collapsable3.js')}}"></script>
-
-
-
-        <!-- DATA TABLES -->
-        <script src="{{asset('jquery-3.4.1.js')}}"></script>
-        <script src="{{asset('assets/js/lib/data-table/datatables.min.js')}}"></script>
-        <script src="{{asset('assets/js/lib/data-table/dataTables.bootstrap.min.js')}}"></script>
-        <script src="{{asset('assets/js/lib/data-table/dataTables.buttons.min.js')}}"></script>
-        <script src="{{asset('assets/js/lib/data-table/buttons.bootstrap.min.js')}}"></script>
-        <script src="{{asset('assets/js/lib/data-table/jszip.min.js')}}"></script>
-        <script src="{{asset('assets/js/lib/data-table/vfs_fonts.js')}}"></script>
-        <script src="{{asset('assets/js/lib/data-table/buttons.html5.min.js')}}"></script>
-        <script src="{{asset('assets/js/lib/data-table/buttons.print.min.js')}}"></script>
-        <script src="{{asset('assets/js/lib/data-table/buttons.colVis.min.js')}}"></script>
-        <script src="{{asset('assets/js/init/datatables-init.js')}}"></script>
-
-
-
-        <!-- <script src="{{asset('arboles_1/collapsable.js')}}"></script> -->
-        <!-- <script src="{{asset('arboles_1/raphael.js')}}"></script>
-        <script src="{{asset('arboles_1/Treant.js')}}"></script>
-        <script src="{{asset('arboles_1/jquery.easing.js')}}"></script> -->
-
+        
         <!--Local Stuff-->
-
+  
     </body>
 </html>
 
@@ -377,80 +329,80 @@
 
 
 //señor metodo maestro ajax
-function metodoAjax(url,dataForm,callback){
-  var resultado = null;
+// function metodoAjax(url,dataForm,callback){
+//   var resultado = null;
 
-  $.ajax({
-  // jQuery.ajax({
-  url :url,
-  data : dataForm,
-  contentType:false,
-  processData:false,
-  headers:{
-      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    },
-  type: 'POST',
-  dataType : 'json',
-  beforeSend: function (){
-    $("#modalCarga").modal();
-  },
-  success : function(json){
-    //resultado = json;
-    callback(json);
-    //$("#nombre_producto").focus();
-  },
-  error : function(xhr, status) {
-    $("#textoModalMensaje").text('Existió un problema con la operación');
-    $("#modalMensaje").modal();
-    MensajeModal('¡ERROR!','Existió un problema, intentelo de nuevo, si el problema persiste favor de reportarlo a la extensión --.')
-  },
-  complete : function(xhr, status){
-     $("#modalCarga").modal('hide');
-     $("#nombre_producto").focus();
-  }
-  });//*/
-  //$("#nombre_producto").focus();
-  }
+//   $.ajax({
+//   // jQuery.ajax({
+//   url :url,
+//   data : dataForm,
+//   contentType:false,
+//   processData:false,
+//   headers:{
+//       'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+//     },
+//   type: 'POST',
+//   dataType : 'json',
+//   beforeSend: function (){
+//     $("#modalCarga").modal();
+//   },
+//   success : function(json){
+//     //resultado = json;
+//     callback(json);
+//     //$("#nombre_producto").focus();
+//   },
+//   error : function(xhr, status) {
+//     $("#textoModalMensaje").text('Existió un problema con la operación');
+//     $("#modalMensaje").modal();
+//     MensajeModal('¡ERROR!','Existió un problema, intentelo de nuevo, si el problema persiste favor de reportarlo a la extensión --.')
+//   },
+//   complete : function(xhr, status){
+//      $("#modalCarga").modal('hide');
+//      $("#nombre_producto").focus();
+//   }
+//   });//*/
+//   //$("#nombre_producto").focus();
+//   }
 
-$("#cc-payment").val(123456);
+// $("#cc-payment").val(123456);
 
-  crearDatatable();
-  function crearDatatable(dato_busqueda,numero_pagina){
-    //$("#tabla_datos").dataTable().fnDestroy();
-    var tabla = $('#tabla_datos').DataTable({
-        //responsive: true,
-        "searching": true,
-        "paging":   true,
-        "info":     true,
-        "ordering": true,
-        "pageLength": 10,
-        //'displayStart': numero_pagina,
-        language: {
-          emptyTable: "No hay datos para mostrar en la tabla",
-          zeroRecords: "No hay datos para mostrar en la tabla",
-          "search": "Buscar:",
-          "info":"Se muestra los registros _START_ a _END_ de _TOTAL_ totales.",
-          "infoEmpty":"No se ha encontrado registros.",
-          "lengthMenu":"Mostrando _MENU_ registros",
-          "infoFiltered":"(Filtrado de un total de _MAX_ registros)",
-          "search": "Buscar: ",
-          paginate: {
-            "first":      "Primero",
-            "last":       "Ultimo",
-            "next":       "Siguiente",
-            "previous":   "Anterior"
-          },
-        }
-      });//*/
-      if(dato_busqueda){
-        tabla.search( dato_busqueda ).draw();
-        $( ".paginate_button  [data-dt-idx='"+numero_pagina+"']" ).trigger("click");
-      }
-  }
+//   crearDatatable();
+//   function crearDatatable(dato_busqueda,numero_pagina){
+//     //$("#tabla_datos").dataTable().fnDestroy();
+//     var tabla = $('#tabla_datos').DataTable({
+//         //responsive: true,
+//         "searching": true,
+//         "paging":   true,
+//         "info":     true,
+//         "ordering": true,
+//         "pageLength": 10,
+//         //'displayStart': numero_pagina,
+//         language: {
+//           emptyTable: "No hay datos para mostrar en la tabla",
+//           zeroRecords: "No hay datos para mostrar en la tabla",
+//           "search": "Buscar:",
+//           "info":"Se muestra los registros _START_ a _END_ de _TOTAL_ totales.",
+//           "infoEmpty":"No se ha encontrado registros.",
+//           "lengthMenu":"Mostrando _MENU_ registros",
+//           "infoFiltered":"(Filtrado de un total de _MAX_ registros)",
+//           "search": "Buscar: ",
+//           paginate: {
+//             "first":      "Primero",
+//             "last":       "Ultimo",
+//             "next":       "Siguiente",
+//             "previous":   "Anterior"
+//           },
+//         }
+//       });//*/
+//       if(dato_busqueda){
+//         tabla.search( dato_busqueda ).draw();
+//         $( ".paginate_button  [data-dt-idx='"+numero_pagina+"']" ).trigger("click");
+//       }
+//   }
 
-function MensajeModal(){
-    console.log('algo');
-}
+// function MensajeModal(){
+//     console.log('algo');
+// }
 
 
 
@@ -508,22 +460,22 @@ function MensajeModal(){
 
 
 
-//     // Menu Trigger
-//     $('#menuToggle').on('click', function(event) {
-//         var windowWidth = $(window).width();
-//         if (windowWidth<1010) {
-//             $('body').removeClass('open');
-//             if (windowWidth<760){
-//                 $('#left-panel').slideToggle();
-//             } else {
-//                 $('#left-panel').toggleClass('open-menu');
-//             }
-//         } else {
-//             $('body').toggleClass('open');
-//             $('#left-panel').removeClass('open-menu');
-//         }
+    // Menu Trigger
+    // $('#menuToggle').on('click', function(event) {
+    //     var windowWidth = $(window).width();
+    //     if (windowWidth<1010) {
+    //         $('body').removeClass('open');
+    //         if (windowWidth<760){
+    //             $('#left-panel').slideToggle();
+    //         } else {
+    //             $('#left-panel').toggleClass('open-menu');
+    //         }
+    //     } else {
+    //         $('body').toggleClass('open');
+    //         $('#left-panel').removeClass('open-menu');
+    //     }
 
-//     });
+    // });
 
 
 //     $(".menu-item-has-children.dropdown").each(function() {

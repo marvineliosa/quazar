@@ -19,6 +19,11 @@ class VerifyCsrfToken extends Middleware
      * @var array
      */
     protected $except = [
-        //
+        // aqui le estoy diciendo que no verifique con \csrf_field a 
+        // la ruta registro_socio,esto puede ser malo por cuestiones de seguridad en la pagina
+        // espero encontrar otra solucion :´v
+        'registro_socio/*',
     ];
 }
+
+

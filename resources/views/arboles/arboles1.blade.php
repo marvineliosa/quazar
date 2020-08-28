@@ -52,6 +52,10 @@
 
   <script type="text/javascript">
 
+
+tree = new Treant( chart_config3 );
+
+
   var morris1 = new Morris.Line({
     // ID of the element in which to draw the chart.
     element: 'myfirstchart',
