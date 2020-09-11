@@ -27,6 +27,14 @@ Route::group(['middleware' => 'verified'], function (){
 });
 
 
+// Rutas para Administrador
+// Route::resource('Administrador','AdministradorController');
+
+
+// Rutas Para Distribuidor
+ Route::resource('Distribuidor','DistribuidorController');
+
+
 ////////////Ruta de pagina de inicio////////////
 Route::get('/', function () {
     return view('pagina_inicio');
